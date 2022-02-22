@@ -5,17 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+ <style>
+
+    body{margin: 0px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+
+     #navbar{
+         width: 100%;
+         height: 72px;
+         color: whitesmoke;
+        
+         background-color: #00253c;
+         border-top: #00b1ff solid;
+         display: flex;
+         }
+             #navbar >div{
+             width: 80%;
+             height: 80%;
+             margin: auto;    border: 1px solid #00253c;
+             display: flex;
+              }
+              
+             #navbar >div >div{
+             height: auto;
+             width: auto;
+             margin-top: auto;
+             display: flex;
+             }
+             #MoreTravel{
+             margin-top: -55px;
+             font-size: 16px;
+             background-color: #00253c;border: 1px solid #00253c;
+             color: white;
+             padding-left: 20px;
+             }
+        
+        #nav_2box{
+         margin-left: 40%;
+        }
+         #nav_2box div{
+         font-size: 14px;
+         
+         margin-left: 30px;
+         margin-bottom: 20px;
+         }
+        
+
+            #navbar img{
+            margin-top: -45px;
+            width: 169px;
+            height: 32px;
+            padding-top: 5px;
+             }
+         
+         #MoreTravel:hover{color: rgb(83, 83, 233);}
+         #MoreTravel option:hover{color: rgb(83, 83, 233);}
+         #nav_2box div:hover{color: rgb(83, 83, 233);}
+     
+ </style>
 </head>
 <body>
-    NAVBAR -> MOHIT
+    <!-- NAVBAR -> MOHIT
     HEADER(SEARCH WALA PART) -> VRUSHALI
     
-    MIDDLE DIV --> 
-    1ST DIV --> HARSHADA
-    2ND DIV --> OMKAR
+    MIDDLE DIV -> 
+    1ST DIV -> HARSHADA
+    2ND DIV -> OMKAR
 
-    FOOTER --> AYUSH
+    FOOTER -> AYUSH
 
-    IMAGE DETAIL AND GITHUB --> IMRAN
+    IMAGE DETAIL AND GITHUB -> IMRAN -->
+    <div id="navbar">
+     
+           <div>
+                <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo"></div>
+                <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Packages">Packages</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Crusise">Crusise</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="Deals">Deals</option>
+                    <option value="GroupsAndMetting">Groups & metting</option>
+                    <option value="TravelBlog">Travel blog</option>
+                  </select>
+                </div>
+                <div id="nav_2box">
+                    <div id="Espanol">Espanol</div>
+                    <div id="listYourPriority">List your Priority</div>
+                    <div id="support">Support</div>
+                    <div id="trips">Trips</div>
+                    <div id="signIn">Sign in</div>
+                </div>
+           </div>
+
+            
+           
+        
+
+   
+    </div>
+
+
+
+
+
+
+
+    
+
 </body>
 </html>
