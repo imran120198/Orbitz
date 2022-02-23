@@ -305,7 +305,7 @@
             name: "The Westin Pune Koregaon Park",
             location: "Mundhawa",
             img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPwFfgPw2RQOx_8QJMf16uTp6WqMcK5OT8-qfHL12ldHpI1Kbz",
-            price: "$115",
+            price: 115,
             rating: 4.3
 
         },
@@ -313,7 +313,7 @@
             name: "JW Marriott Hotel Pune",
             location: "Model colony",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXYNsEanb1mUedfgDZrPw_7riHthP-3J0C4HgAg-EBIjtWlPV",
-            price: "$136",
+            price: 136,
             rating: 4.6
 
         },
@@ -321,7 +321,7 @@
             name: "Conrad Pune by Hilton",
             location: "Pune",
             img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHaNksNdlHUnN0RMU1kn2TWF9fyXva-ZvEA28GKuUpgYfVXpPb",
-            price: "$136",
+            price: 136,
             rating: 4.8
 
         },
@@ -329,7 +329,7 @@
             name: "Four Points by Sheraton Hotel & Serviced Apartments, Pune",
             location: "Pune",
             img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYdkPQyxIJuzxEJdv72LNYT21cMwaYWhh3tmPwXEbVDntl7BzM",
-            price: "$7.5",
+            price:7.5,
             rating: 4.1
 
         },
@@ -337,7 +337,7 @@
             name: "The Ritz-Carlton, Pune",
             location: "Pune",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-wPdMICMMjeSIiOjFua0PRkiliFxp8y7nexbqPmtec5DZG0q",
-            price: "$157",
+            price: 157,
             rating: 4.7
 
         },
@@ -345,7 +345,7 @@
             name: "Crowne Plaza Pune City Centre, an IHG Hotel",
             location: "Pune",
             img: "https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/8ee5aa87.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$54",
+            price: 54,
             rating: 4.2
 
         },
@@ -353,7 +353,7 @@
             name: "Blue Diamond - IHCL SeleQtions",
             location: "Pune",
             img: "https://images.trvl-media.com/hotels/1000000/590000/581400/581366/ab4fe8d0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$63",
+            price: 63,
             rating: 4.4
 
         },
@@ -361,7 +361,7 @@
             name: "Choice Service Apartment",
             location: "Kothrud",
             img: "https://images.trvl-media.com/hotels/65000000/64700000/64690600/64690509/920372bc.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$24",
+            price: 24,
             rating: 4.4
 
         },
@@ -369,7 +369,7 @@
             name: "ITC Gardenia, a Luxury Collection Hotel, Bengaluru",
             location: "Ashok Nagar, Bengaluru",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7iUUFI0pXiD7Dv63BvFzETkPb2WBBZYo1Fdx9sEEW0YC-JI4",
-            price: "$95",
+            price: 95,
             rating: 4.6
 
         },
@@ -377,7 +377,7 @@
             name: "Hyatt Centric MG Road Bangalore",
             location: "Bengaluru",
             img: "https://images.trvl-media.com/hotels/7000000/6500000/6493900/6493895/27a0c3a7.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$63",
+            price: 63,
             rating: 4.0
 
         },
@@ -385,7 +385,7 @@
             name: "Taj Bangalore",
             location: "Devenhalli,Bengaluru",
             img: "https://images.trvl-media.com/hotels/13000000/13000000/12997400/12997353/1b6e9e76.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$120",
+            price: 120,
             rating: 4.7
 
         },
@@ -393,7 +393,7 @@
             name: "Royal Orchid Central Bangalore",
             location: "Bengaluru City center",
             img: "https://images.trvl-media.com/hotels/2000000/1140000/1135700/1135650/6f30ebe1.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$59",
+            price: 59,
             rating: 3.6
 
         },
@@ -401,7 +401,7 @@
             name: "The Zuri Whitefield, Bangalore",
             location: "Bengaluru",
             img: "https://images.trvl-media.com/hotels/3000000/2440000/2437300/2437255/6386aa16.jpg?impolicy=resizecrop&rw=1200&ra=fit",
-            price: "$53",
+            price: 53,
             rating: 4.4
 
         }
@@ -472,8 +472,8 @@
         });
 
     }
-    document.querySelector("#sorter").addEventListener("click", sortByRate);
-    function sortByRate() {
+    document.querySelector("#sorter").addEventListener("click", sortByPrice);
+    function sortByPrice() {
         hotel.map(function (elem) {
             var sorting = document.querySelector("#sorter").value;
             console.log(sorting);
