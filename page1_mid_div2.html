@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            width: 100%;
+            height: 900px;
+            gap: 3px;
+        }
+
+        .div1 {
+            display: flex;
+            margin: auto;
+            height: 100px;
+            width: 70%;
+        }
+
+        .div1>div {
+            display: grid;
+            margin: auto;
+            width: auto;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: 100px;
+        }
+
+        .div1_img {
+            height: 100px;
+            width: 300px;
+        }
+
+        .div2 {
+            padding: 12px;
+            width: 70%;
+            margin: auto;
+        }
+
+        .offers {
+            display: flex;
+            margin-top: -10px;
+            justify-content: space-between;
+        }
+
+        .offersSubdiv {
+            padding: 24px;
+            padding-top: 60px;
+            box-sizing: border-box;
+            
+        }
+
+        .offers>.offersSubdiv:nth-child(1) {
+            height: 150px;
+            width: 220px;
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&amp;w=900&amp;h=600&amp;q=mediumHigh");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center; 
+        }
+
+        .offers>.offersSubdiv:nth-child(2) {
+            height: 150px;
+            width: 220px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&amp;w=900&amp;h=600&amp;q=mediumHigh");
+        }
+
+        .offers>.offersSubdiv:nth-child(3) {
+            height: 150px;
+            width: 220px;
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&amp;w=900&amp;h=600&amp;q=mediumHigh");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+
+        .offers>.offersSubdiv:nth-child(4) {
+            height: 150px;
+            width: 220px;
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&amp;w=900&amp;h=600&amp;q=mediumHigh");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+
+        .offersSubdiv>.textDiv>h4 {
+            color: white;
+        }
+
+        .offersSubdiv>.textDiv>p {
+            color: white;
+        }
+
+        .div3 {
+            display: flex;
+            margin: auto;
+            height: 250px;
+            width: 70%;
+            gap: 10px;
+            justify-content:space-between;
+
+        }
+
+        .div3_inner1>div {
+            height: 250px;
+            width: 600px;
+            border: 1px solid rgb(177, 176, 176);
+
+        }
+
+        .div3_inner1>div>img {
+            height: 150px;
+            width: 600px;
+        }
+        .div_beach{
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        .div3_inner2 {
+            display: grid;
+            /* margin: auto; */
+            width: 300px;
+            height: 250px;
+            gap: 5px;
+            grid-template-columns: repeat(1, 300px);
+            grid-template-rows: repeat(215px);
+        }
+
+        .div3_inner2div {
+            display: flex;
+            width: 300px;
+            height: 121px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(177, 176, 176);
+
+        }
+
+        .div3_inner2div>img {
+            height: 121px;
+            width: 80px;
+        }
+
+        .div3_inner2div>div {
+            margin: 0px 10px 10px 0px;
+            line-height: 0.8em;
+            margin-left: 20px;
+        }
+        p{
+            font-size:13px;
+            color:rgb(177, 176, 176);
+        }
+
+        .div4 {
+            display: flex;
+            margin: auto;
+            height: 200px;
+            width: 70%;
+        }
+
+        .div4_inner1 {
+            width: 650px;
+            height: 200px;
+            justify-content: space-between;
+        }
+        .div4_inner1>img{
+            width: 650px;
+            height: 200px;
+        }
+
+        .div4_inner2 {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-image: url("https://s0.2mdn.net/8563344/BMOT-ExpediaBannerAds-300x250.jpeg");
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="div1">
+            <div>
+                <img alt="" class="div1_img"
+                    src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&amp;w=900&amp;h=386&amp;q=mediumHigh">
+            </div>
+            <div>
+                <img alt="" class="div1_img"
+                    src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&amp;w=900&amp;h=386&amp;q=mediumHigh">
+            </div>
+            <div>
+                <img alt="" class="div1_img"
+                    src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&amp;w=900&amp;h=386&amp;q=mediumHigh">
+            </div>
+        </div>
+
+        <div class=div2>
+
+            <h2>Featured offers</h2>
+            <div class="offers">
+                <div class="offersSubdiv">
+                    <div class="textDiv">
+                        <h4>Last minute deals</h4>
+                        <p>Getway today</p>
+                    </div>
+                </div>
+
+                <div class="offersSubdiv">
+                    <div class="textDiv">
+                        <h4>All-inclusive resorts</h4>
+                        <p>Enjoy sun and fun</p>
+                    </div>
+                </div>
+
+                <div class="offersSubdiv">
+                    <div class="textDiv">
+                        <h4>Insider Prices</h4>
+                        <p>Members get rewarded</p>
+                    </div>
+                </div>
+                <div class="offersSubdiv">
+                    <div class="textDiv">
+                        <h4>Jet and reset</h4>
+                        <p>Fly south for the winter</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="div3">
+            <div class="div3_inner1">
+                <div>
+                    <img frameborder="0"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9WFwV5VFbLW2gNW1ooDwZpdbmBdBkfL8ImYIC1O5DVBH3ouK"></img>
+                    <div id="div_beach">
+                        <h4>Beach destination deals</h4>
+                        <p>However you like to spend your time in sun, you can enjoy it with savings.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="div3_inner2">
+                <!-- 1st -->
+                <div class="div3_inner2div">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Si3Cz3XEwq40m5cGhDbrxEnZbAnKARQYSw&usqp=CAU">
+                    <div>
+                        <h4>Flights under $199</h4>
+                        <p>Affordable fares are here, whihc is good, because you've 
+                            waited a lonf time for this...
+                        </p>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="div3_inner2div">
+                    <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQS_WWcCMMjq9qDrQR6vpkqONDDZW22yNjfwQmlrxqcm35gk75">
+                    <div>
+                        <h4>Hotel under $99</h4>
+                        <p>Wherever in the world you decide to go,
+                            you shouldn't have to spend a ton of dough!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div4">
+            <div class="div4_inner1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ63uNPNPCSE6fDYqZpnRgfjdGpalSAfvmPshi0OTukXhHHTMb"
+                    alt="">
+            </div>
+            <div class="div4_inner2">
+                <h4>Car Rental deals</h4>
+                <p>Get cruisin' for less. Because renting a car should be fun, not stressful.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
