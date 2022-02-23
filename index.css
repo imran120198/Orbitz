@@ -1,0 +1,55 @@
+
+    body{margin: 0px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+
+    #navbar{
+        width: 100%;
+        height: 72px;
+        color: whitesmoke;
+       
+        background-color: #00253c;
+        border-top: #00b1ff solid;
+        display: flex;
+        }
+            #navbar >div{
+            width: 80%;
+            height: 80%;
+            margin: auto;    border: 1px solid #00253c;
+            display: flex;
+             }
+             
+            #navbar >div >div{
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+            }
+            #MoreTravel{
+            margin-top: -55px;
+            font-size: 16px;
+            background-color: #00253c;border: 1px solid #00253c;
+            color: white;
+            padding-left: 20px;
+            }
+       
+       #nav_2box{
+        margin-left: 40%;
+       }
+        #nav_2box div{
+        font-size: 14px;
+        
+        margin-left: 30px;
+        margin-bottom: 20px;
+        }
+       
+
+           #navbar img{
+           margin-top: -45px;
+           width: 169px;
+           height: 32px;
+           padding-top: 5px;
+            }
+        
+        #MoreTravel:hover{color: rgb(83, 83, 233);}
+        #MoreTravel option:hover{color: rgb(83, 83, 233);}
+        #nav_2box div:hover{color: rgb(83, 83, 233);}
