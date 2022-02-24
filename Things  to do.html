@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/style/page1.css"> -->
+</head>
+<style>
+   #background
+{
+    height: 400px ;
+    width:100%;
+   background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh");
+}
+
+#background > div
+{
+    width: 70%;
+    height: 75%;
+    background-color: white;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+}  
+    
+#background > div >div div{
+    margin-bottom: 30px;
+}
+
+#facility
+{
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 500px;
+    background-color: white;
+    font-size: large;
+    margin : auto; 
+
+}
+#form
+{
+    display: flex;
+    
+    height: 20%;
+    width: 95%;
+    background-color: white;
+     margin: auto;
+     border-top: solid black 2px;
+     
+ 
+}
+#form > div:nth-child(1)
+{
+    height: 80%;
+    width: 45%;
+    background-color: white;
+    border: 1px solid gray;
+    margin: auto;
+
+}
+#form > div:nth-child(2)
+{
+    height: 80%;
+    width: 20%;
+    background-color: white;
+    border: 1px solid gray;
+    margin: auto;
+}
+#form > div:nth-child(2) p, #form > div:nth-child(3) p{
+    margin: 0px;
+}
+#form > div:nth-child(3)
+{
+    height: 80%;
+    width: 20%;
+    background-color: white;
+    border: 1px solid gray;
+    margin: auto;
+}
+
+#goingto
+{
+    font-size: 20px;
+    margin: auto;
+    height: 85%;
+    border: 1px solid aliceblue;
+}
+
+#background >div >div>div:nth-child(3)  
+{
+    display: flex;
+    height:20%;
+    width: 40%;
+    margin: left;
+    background-color: white;
+    margin-left: 10%;
+}
+#background >div >div>div:nth-child(3) div{
+ display: flex;
+ height: 100%;
+ width: 50%;
+} 
+
+#background >div >div>div:nth-child(3) p{
+
+margin: 10%;
+
+}
+
+#background >div >div>div:nth-child(4) 
+{
+margin: auto;
+width: 20%;
+
+}
+#background >div >div>div:nth-child(4) button
+{
+height: 150%;
+width: 100%;
+background-color: #c83259;
+}
+
+</style>
+<body>
+    <div id="background">
+        <div>
+            <div>
+                <div id="facility">
+                    <p>Stays</p>
+                    <p>Flights</p>
+                    <p> Cars</p>
+                    <p>Packages</p>
+                    <p>Things to do</p>
+                    <p>Cruises</p>
+                </div>
+
+                <div id="form">
+                    <div>
+                        <input type="text"placeholder= "Going to"id="goingto">
+                    </div>
+                    <div>
+                        <p> From</p>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <p> To</p>
+                        <input type="date">
+                    </div>
+                  
+                    
+                </div>
+
+                <div>
+                    
+                </div>
+
+                <div>
+                    <button id="search" >Search</button>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+
+</html>
