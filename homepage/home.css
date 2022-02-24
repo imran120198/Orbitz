@@ -53,7 +53,7 @@
     #nav_2box div:hover{color: rgb(83, 83, 233);}
 
 /*header*/
-.main
+.one
 {
     height: 600px;
     width: 1600px;
@@ -63,7 +63,7 @@
     
 }
 
-    .parent
+    .two
     {
         height: 300px;
         width: 1300px;
@@ -73,7 +73,7 @@
         background-color: white;
     }
     
-    #facility
+    #three
     {
         display: flex;
         justify-content: space-evenly;
