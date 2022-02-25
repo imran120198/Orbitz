@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* header */
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+
+            background-color: #00253c;
+            border-top: #00b1ff solid;
+            display: flex;
+        }
+
+        #navbar>div {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            border: 1px solid #00253c;
+            display: flex;
+        }
+
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+
+        #MoreTravel {
+            margin-top: -55px;
+            font-size: 16px;
+            background-color: #00253c;
+            border: 1px solid #00253c;
+            color: white;
+            padding-left: 20px;
+        }
+
+        #nav_2box {
+            margin-left: 40%;
+        }
+
+        #nav_2box div {
+            font-size: 14px;
+
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        #navbar img {
+            margin-top: -45px;
+            width: 169px;
+            height: 32px;
+            padding-top: 5px;
+        }
+
+        #MoreTravel:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        #MoreTravel option:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        #nav_2box div:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        /* main */
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        tr>th {
+            background-color: #C83259;
+            color: white;
+        }
+
+
+        /* footer */
+        .one {
+            height: 450px;
+            width: 95%;
+            margin: auto;
+            background-color: #f5f5f5;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .imgFooter {
+            height: 20px;
+            width: 70%;
+            margin: 10px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="navbar">
+
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo">
+            </div>
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Packages">Packages</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Crusise">Crusise</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="Deals">Deals</option>
+                    <option value="GroupsAndMetting">Groups & metting</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+            <div id="nav_2box">
+                <div id="Espanol">Espanol</div>
+                <div id="listYourPriority">List your Priority</div>
+                <div id="support">Support</div>
+                <div id="trips">Trips</div>
+                <div id="signIn">Sign in</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Table -->
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </main>
+
+    <!-- Footer -->
+    <div class="one">
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="https://www.orbitz.com/lp/b/about">About us</a></p>
+            <p><a href="https://lifeatexpediagroup.com/">Jobs</a></p>
+            <p><a href="https://welcome.expediagroup.com/en/about-us/join-orbitz">List your property</a></p>
+            <p><a href="https://www.expediagroup.com/partner-with-us/default.aspx">Partnerships</a></p>
+            <p><a href="https://www.orbitz.com/press/">Newsroom</a></p>
+            <p><a href="https://www.expediagroup.com/investors/investors-overview/default.aspx">Investor Relation</a>
+            </p>
+            <p><a href="https://www.orbitz.com/p/info-other/sitemap">Site Map</a></p>
+            <p><a href="https://www.orbitz.com/rewards">Orbital Rewards</a></p>
+            <p><a href="https://advertising.expedia.com/getting-started/brands/orbitz/">Advertising</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="https://www.orbitz.com/Destinations-In-United-States-Of-America.d201.Hotel-Destinations">Hotels
+                    in United States</a></p>
+            <p><a
+                    href="https://www.orbitz.com/Destinations-In-United-States-Of-America.d201.Vacation-Rental-Destinations">Vacation
+                    Rentals in United States</a></p>
+            <p><a href="https://www.orbitz.com/Destinations-In-United-States-Of-America.d201.Car-Rental-Destinations">Cars
+                    Rentals in United States</a></p>
+            <p><a href="https://www.orbitz.com/Destinations-In-United-States-Of-America.d201.Flight-Destinations">Domestics
+                    Flights</a></p>
+            <p><a href="https://www.orbitz.com/United-States-Of-America.d201.Destination-Travel-Guides">Vacation
+                    Packages In United States</a></p>
+            <p><a href="https://www.orbitz.com/reviews/">Orbitz Reviews</a></p>
+            <p><a href="https://www.orbitz.com/lp/deals/exclusive-promo-codes-coupons-discounts">Orbitz Coupons</a></p>
+            <p><a href="https://www.orbitz.com/lp/lgbtq-gay-travel-hotels">LGBTQ Travel</a></p>
+            <p><a href="https://www.orbitz.com/Accommodations">Unique Accommodation</a></p>
+            <p><a href="https://www.orbitz.com/blog/">Travel Blog</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="https://www.orbitz.com/lp/lg-privacy">Privacy Policy</a></p>
+            <p><a href="https://www.orbitz.com/lp/lg-terms">Terms of Use</a></p>
+            <p><a href="https://www.orbitz.com/rewards/terms">Orbitz Rewards Terms</a></p>
+            <p><a href="https://www.orbitz.com/dnsmpi">Do not sell my personal information</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="https://www.orbitz.com/service/">Support</a></p>
+            <p><a href="https://www.orbitz.com/service/#/articles/560/34/16267">Cancel your hotel or vacation rental
+                    booking</a></p>
+            <p><a href="https://www.orbitz.com/service/#/articles/569/34/16477">Cancel your flight</a></p>
+            <p><a href="https://www.orbitz.com/service/#/myTrips/16138">Refund timelines,policies & processes</a></p>
+            <p><a href="https://www.orbitz.com/service/#/article/19518">Use an Orbitz Coupon</a></p>
+        </div>
+    </div>
+    <div class="three">
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var trips = JSON.parse(localStorage.getItem("tripElem"));
+    console.log(trips);
+
+    trips.map(function (elem, index) {
+
+        var row = document.createElement("tr");
+
+        var col1 = document.createElement("td");
+        col1.innerText = elem.name;
+
+        var col2 = document.createElement("td");
+        col2.innerText = elem.location;
+
+        var col3 = document.createElement("td");
+        col3.innerText = elem.city;
+
+        var col4 = document.createElement("td");
+        col4.innerText = "Reserved"
+
+        row.append(col1, col2, col3,col4);
+        document.querySelector("#tbody").append(row);
+
+    });
+
+</script>
