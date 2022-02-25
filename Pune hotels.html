@@ -1,0 +1,84 @@
+var hotelsPune = [
+        {
+            name: "The Westin Pune Koregaon Park",
+            location: "Mundhawa",
+            img: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/02/FotoJet-1sjdg83764shgfd.jpg",
+            price: 115,
+            rating: 4.3
+
+        },
+        {
+            name: "JW Marriott Hotel Pune",
+            location: "Model colony",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXYNsEanb1mUedfgDZrPw_7riHthP-3J0C4HgAg-EBIjtWlPV",
+            price: 136,
+            rating: 4.6
+
+        },
+        {
+            name: "Conrad Pune by Hilton",
+            location: "Pune",
+            img: "https://m.lemontreehotels.com/getattachment/64ae8c4e-e628-446e-a00b-06444ca4b809/Facade.aspx",
+            price: 136,
+            rating: 4.8
+
+        },
+        {
+            name: "Four Points by Sheraton Hotel & Serviced Apartments, Pune",
+            location: "Pune",
+            img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYdkPQyxIJuzxEJdv72LNYT21cMwaYWhh3tmPwXEbVDntl7BzM",
+            price:7.5,
+            rating: 4.1
+
+        },
+        {
+            name: "The Ritz-Carlton, Pune",
+            location: "Pune",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-wPdMICMMjeSIiOjFua0PRkiliFxp8y7nexbqPmtec5DZG0q",
+            price: 157,
+            rating: 4.7
+
+        },
+        {
+            name: "Crowne Plaza Pune City Centre, an IHG Hotel",
+            location: "Pune",
+            img: "https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/8ee5aa87.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 54,
+            rating: 4.2
+
+        },
+        {
+            name: "Blue Diamond - IHCL SeleQtions",
+            location: "Pune",
+            img: "https://images.trvl-media.com/hotels/1000000/590000/581400/581366/ab4fe8d0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 63,
+            rating: 4.4
+
+        },
+        {
+            name: "Choice Service Apartment",
+            location: "Kothrud",
+            img: "https://images.trvl-media.com/hotels/65000000/64700000/64690600/64690509/920372bc.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 24,
+            rating: 4.4
+
+        },
+        {
+            name: "Novotel",
+            location: "Kothrud",
+            img: "data:image/jpeg;base64,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",
+            price: 24,
+            rating: 4.4
+
+        },
+        {
+            name: "Luxury Hotel",
+            location: "Kothrud",
+            img: "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-lobby-50685592",
+            price: 24,
+            rating: 4.4
+
+        },
+        
+    ];
+    
