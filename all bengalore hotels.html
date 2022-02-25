@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #cantainer
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows:7;
+       height: 100%;
+       width: 100%;
+       background-color: aliceblue; 
+       gap: 20px ;
+    }
+    .maindiv
+    {
+        height: 400px;
+        width: 400px;
+    }
+
+    .innerDiv{
+        display: flex;
+        justify-content: space-between;
+        height: 30%;
+        width: 500px;
+        background-color: blue;
+    }
+
+    .divPrice
+    {
+        height: 15%;
+        width: 200px;
+    }
+    .divRatings
+    {
+       
+        height: 15%;
+        width: 200px;
+       
+        }
+</style>
+
+
+<body>
+
+<div id="cantainer"></div>
+</body>
+
+<script >
+
+var hotel = [
+    {
+    name:"JW Marriott Hotel Bengaluru",
+    image:"http://www.businesstraveller.com/files/News-images/JW-Marriott-Bengaluru/blrjw_phototour05.gif",
+    price:2000,
+    rating:4.5,
+    loacation: "24/1, Vittal Mallya Rd, KG Halli, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
+    },
+    
+    {
+    name:"Holiday Inn Bengaluru Racecourse, an IHG Hotel",
+    image:"https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/3b/52/d5/guest-room.jpg",
+    price: 1500,
+    rating:4.0,
+    loacation:"Ward No.94, 16/1, Seshadri Rd, Racecourse, Gandhi Nagar, Bengaluru, Karnataka 560009",
+    },
+    
+    {
+    name:"The Ritz-Carlton, Bangalore",
+    image:"https://pbs.twimg.com/media/CvqeUAwW8AA2pfS.jpg",
+    price:1700,
+    rating:4.7,
+    loacation:"99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
+    },
+    
+    
+    {
+    name:"ITC Gardenia, a Luxury Collection Hotel, Bengaluru ",
+    image:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/45259901.jpg?k=3bc18f564fc2c06295f83694525bcd2e43b6f6d33b693a889bf30a14ce9f3661&o=&hp=1",
+    price:2200,
+    rating:4.6,
+    loacation:"1, Residency Rd, Ashok Nagar, Bengaluru, Karnataka 560025",
+    },
+    
+    {
+    name:"The Leela Palace Bengaluru",
+    image:"https://cdn0.weddingwire.in/vendor/9648/3_2/960/jpg/hotel-ext_15_39648-161701165114583.jpeg",
+    price:2500,
+    rating:4.7,
+    loacation:"23, HAL Old Airport Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008",
+    },
+    
+    {
+    name:"Shangri-La Bengaluru",
+    image:"https://cdn0.weddingwire.in/vendor/9648/3_2/960/jpg/hotel-ext_15_39648-161701165114583.jpeg",
+    
+    price:1900,
+    rating:4.7,
+    loacation:"No. 56, 6B, Palace Rd, Abshot Layout, Vasanth Nagar, Bengaluru, Karnataka 560052",
+    },
+    
+    {
+    name:"The Oberoi, Bengaluru",
+    image:"https://media-cdn.tripadvisor.com/media/photo-s/01/08/4e/41/oberoi-hotel-bangalore.jpg",
+    price:2900,
+    rating:4.8,
+    loacation:"37-39, Mahatma Gandhi Rd, Yellappa Garden, Yellappa Chetty Layout, Sivanchetti Gardens, Bengaluru, Karnataka",
+    price: 560001,
+    },
+    
+    {
+    name:"Hyatt Centric MG Road Bangalore",
+    image:"https://b.zmtcdn.com/data/pictures/2/51102/1cd1c86632d0bc4a87f22a85f6216f26.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    price:1500,
+    rating:4.0,
+    loacation:"1/1, Swami Vivekananda Rd, Someshwarpura, Halasuru, Bengaluru, Karnataka 560008",
+    },
+    {
+            name: "The Westin Pune Koregaon Park",
+            loacation: "Mundhawa",
+            image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPwFfgPw2RQOx_8QJMf16uTp6WqMcK5OT8-qfHL12ldHpI1Kbz",
+            price: 115,
+            rating: 4.3
+
+        },
+        {
+            name: "JW Marriott Hotel Pune",
+            loacation: "Model colony",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXYNsEanb1mUedfgDZrPw_7riHthP-3J0C4HgAg-EBIjtWlPV",
+            price: 136,
+            rating: 4.6
+
+        },
+        {
+            name: "Conrad Pune by Hilton",
+            loacation: "Pune",
+            image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHaNksNdlHUnN0RMU1kn2TWF9fyXva-ZvEA28GKuUpgYfVXpPb",
+            price: 136,
+            rating: 4.8
+
+        },
+        {
+            name: "Four Points by Sheraton Hotel & Serviced Apartments, Pune",
+            loacation: "Pune",
+            image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYdkPQyxIJuzxEJdv72LNYT21cMwaYWhh3tmPwXEbVDntl7BzM",
+            price:7.5,
+            rating: 4.1
+
+        },
+        {
+            name: "The Ritz-Carlton, Pune",
+            loacation: "Pune",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-wPdMICMMjeSIiOjFua0PRkiliFxp8y7nexbqPmtec5DZG0q",
+            price: 157,
+            rating: 4.7
+
+        },
+        {
+            name: "Crowne Plaza Pune City Centre, an IHG Hotel",
+            loacation: "Pune",
+            image: "https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/8ee5aa87.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 54,
+            rating: 4.2
+
+        },
+        {
+            name: "Blue Diamond - IHCL SeleQtions",
+            loacation: "Pune",
+            image: "https://images.trvl-media.com/hotels/1000000/590000/581400/581366/ab4fe8d0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 63,
+            rating: 4.4
+
+        },
+        {
+            name: "Choice Service Apartment",
+            loacation: "Kothrud",
+            image: "https://images.trvl-media.com/hotels/65000000/64700000/64690600/64690509/920372bc.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 24,
+            rating: 4.4
+
+        },
+        {
+            name: "ITC Gardenia, a Luxury Collection Hotel, Bengaluru",
+            loacation: "Ashok Nagar, Bengaluru",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7iUUFI0pXiD7Dv63BvFzETkPb2WBBZYo1Fdx9sEEW0YC-JI4",
+            price: 95,
+            rating: 4.6
+
+        },
+        {
+            name: "Hyatt Centric MG Road Bangalore",
+            loacation: "Bengaluru",
+            image: "https://images.trvl-media.com/hotels/7000000/6500000/6493900/6493895/27a0c3a7.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 63,
+            rating: 4.0
+
+        },
+        {
+            name: "Taj Bangalore",
+            loacation: "Devenhalli,Bengaluru",
+            image: "https://images.trvl-media.com/hotels/13000000/13000000/12997400/12997353/1b6e9e76.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 120,
+            rating: 4.7
+
+        },
+        {
+            name: "Royal Orchid Central Bangalore",
+            loacation: "Bengaluru City center",
+            image: "https://images.trvl-media.com/hotels/2000000/1140000/1135700/1135650/6f30ebe1.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 59,
+            rating: 3.6
+
+        },
+        {
+            name: "The Zuri Whitefield, Bangalore",
+            locloacationation: "Bengaluru",
+            image: "https://images.trvl-media.com/hotels/3000000/2440000/2437300/2437255/6386aa16.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 53,
+            rating: 4.4
+
+        }
+];
+
+localStorage.setItem("hoteldataList",JSON.stringify(hotel));
+var booked= JSON.parse(localStorage.getItem("bookedHotel")) || [];
+    console.log(booked);
+
+var hotelData=JSON.parse(localStorage.getItem("hoteldataList"))|| [];
+
+
+        hotelData.map(function (elem){
+
+            
+            var div=document.createElement("div");
+            div.setAttribute("class","maindiv");
+
+            var innerDiv=document.createElement("div");
+            innerDiv.setAttribute=("class","innerDiv")
+
+            var divRatings = document.createElement("div");
+            divRatings.setAttribute("class", "divRatings");
+
+            var divPrice = document.createElement("div");
+            divPrice.setAttribute("class", "divPrice");
+
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image);
+        img.style.height="150px";
+        img.style.width="350px";
+    
+        var location= document.createElement("p");
+        location.innerText = elem.loacation;
+        location.style.fontSize="15px";
+    
+        var name = document.createElement("h1");
+        name.innerText = elem.name;
+        name.style.fontSize="20px";
+        
+    
+        var rating = document.createElement("p");
+        rating.innerText = elem.rating;
+        
+        var rating1 = document.createElement("p");
+        rating1.innerText = "reviews";
+        rating1.style.marginTop="-20px";
+    
+        var price = document.createElement("p");
+        price.innerText = elem.price;
+        price.style.fontSize= "30px" ;
+      
+       
+        var price1 = document.createElement("p");
+        price1.innerText = "per night";
+        price1.style.marginTop="-30px"
+
+
+        var button=document.createElement("button");
+        button.innerText="book";
+        button.addEventListener("click",function()
+        {
+            bookedHotel(elem);
+        }
+        )
+         divPrice.append(price,price1);
+        divRatings.append(rating,rating1);
+        innerDiv.append(divPrice,divRatings);
+        div.append(img,name,location,innerDiv,button);
+        document.querySelector("#cantainer").append(div);
+
+
+        function  bookedHotel(elem)
+        {
+            booked.push(elem);
+            localStorage.setItem("bookedHotel",JSON.stringify(booked));
+            button.innerText="booked";
+            alert("booking confirmed");
+            button.style.background="green";
+           }
+        }
+        );
+        
+      
+</script>
+
+</html>
