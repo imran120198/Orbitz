@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* navbar */
+
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+
+            background-color: #00253c;
+            border-top: #00b1ff solid;
+            display: flex;
+        }
+
+        #navbar>div {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            border: 1px solid #00253c;
+            display: flex;
+        }
+
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+
+        #MoreTravel {
+            margin-top: -55px;
+            font-size: 16px;
+            background-color: #00253c;
+            border: 1px solid #00253c;
+            color: white;
+            padding-left: 20px;
+        }
+
+        #nav_2box {
+            margin-left: 40%;
+        }
+
+        #nav_2box div {
+            font-size: 14px;
+
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        #navbar img {
+            margin-top: -45px;
+            width: 169px;
+            height: 32px;
+            padding-top: 5px;
+        }
+
+        #MoreTravel:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        #MoreTravel option:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        #nav_2box div:hover {
+            color: rgb(83, 83, 233);
+        }
+
+        /* middle session */
+
+        .firstDiv {
+            height: 350px;
+            width: 100%;
+
+        }
+
+        .imgContainer {
+            height: 240px;
+            width: 100%;
+        }
+
+        .para {
+            width: 70%;
+            margin: auto;
+            justify-content: center;
+            padding: 10px;
+            text-align: justify;
+            color: #616161;
+        }
+
+        .container {
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+
+        .secondDiv {
+
+            width: 70%;
+            margin: auto;
+            justify-content: center;
+            padding: 10px;
+            height: 850px;
+            background-color: #f5f5f5;
+
+        }
+
+        .secondDiv>h2:nth-child(1) {
+            margin-top: -15px;
+        }
+
+        .travel {
+            display: grid;
+            margin-top: -17px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 130px);
+            gap: 10px;
+        }
+
+        .travelImg {
+            height: 130px;
+            width: 300px;
+        }
+
+        .benefit {
+            display: grid;
+            margin-top: -17px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 130px);
+            gap: 21px;
+            align-items: space-between;
+        }
+
+        .benefitImg {
+            height: 130px;
+            width: 450px;
+            justify-content: center;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .discover {
+            display: grid;
+            margin-top: -17px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .discoverDiv {
+            background-color: white;
+            border: 1px solid rgb(228, 222, 222)
+        }
+
+        .discoverImg {
+            height: 100px;
+            width: 180px;
+        }
+
+        .discoverInner {
+            padding: 10px;
+        }
+
+        .discoverInner>h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .discoverInner>p {
+            font-size: 12px;
+
+        }
+
+        .rewards {
+            display: grid;
+            margin-top: -17px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .rewardImg {
+            margin-top: 40px;
+            height: 200px;
+            width: 460px;
+        }
+
+        /* footer */
+        .one {
+            height: 450px;
+            width: 95%;
+            margin: auto;
+            background-color: #f5f5f5;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .imgFooter {
+            height: 20px;
+            width: 70%;
+            margin: 10px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div id="navbar">
+
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo">
+            </div>
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Packages">Packages</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Crusise">Crusise</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="Deals">Deals</option>
+                    <option value="GroupsAndMetting">Groups & metting</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+            <div id="nav_2box">
+                <div id="Espanol">Espanol</div>
+                <div id="listYourPriority">List your Priority</div>
+                <div id="support">Support</div>
+                <div id="trips">Trips</div>
+                <div id="signIn">Sign in</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+
+    <div class="firstDiv">
+        <img alt="" class="imgContainer"
+            src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/28/ORB_AboutUs_lpheroB_1680x945_20210722.png?impolicy=fcrop&amp;w=900&amp;h=506&amp;q=mediumHigh">
+
+        <div class="para">
+            <p>
+                <b>
+                    No matter who you are or where you’re going, you deserve to travel freely. Orbitz
+                    has advocated for safe, inclusive travel for more than 20 years with our historic
+                    support of the LGBTQIA+ community. However, we recognize there’s still hard work
+                    to be done for this community and many others. We’re committed to that work until
+                    travel is possible for everyone.
+                </b>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="secondDiv">
+
+            <h2>Travel on your own terms</h2>
+
+            <div class="travel">
+
+                <div>
+                    <img alt="" class="travelImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/28/ORB_AboutUs_PrideHub_900x386_20210728.jpg?impolicy=fcrop&amp;w=600&amp;h=257&amp;q=medium">
+                </div>
+                <div>
+                    <img alt="" class="travelImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/28/ORB_AboutUs_TravelBlog2_900x386_20210728.jpg?impolicy=fcrop&amp;w=600&amp;h=257&amp;q=medium">
+                </div>
+                <div><img alt="" class="travelImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/28/ORB_AboutUs_LGBTQWelcomingHotels_900x386_20210728.jpg?impolicy=fcrop&amp;w=600&amp;h=257&amp;q=medium">
+
+                </div>
+            </div>
+
+            <h2>The benefits of booking with Orbitz</h2>
+
+            <div class="benefit">
+                <div>
+                    <img alt="" class="benefitImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/29/ORB_AboutUs_Benefits_Rewards_lpadB_575x160_20210729.png" />
+
+                </div>
+                <div>
+                    <img alt="" class="benefitImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/29/ORB_AboutUs_Benefits_VIPAccess_lpadB_575x160_20210729.png" />
+                </div>
+
+            </div>
+
+            <h2>Discover a new perspective</h2>
+            <div class="discover">
+                <div class="discoverDiv">
+                    <img class="discoverImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/22/ORB_AboutUs_Blog_BlackOwnedHotels_imgB_1040x585_20210722.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" />
+                    <div class=" discoverInner">
+                        <h3>9 Black-owned hotels to visit</h3>
+                        <p>When diverse businesses are supported, everyone benefits.</p>
+                    </div>
+                </div>
+                <div class="discoverDiv">
+                    <img class="discoverImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/22/ORB_AboutUs_Blog_WheelchairRoadTrips_imgB_1040x585_20210722.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" />
+                    <div class=" discoverInner">
+                        <h3>Accessibility road trip tips</h3>
+                        <p>Helpful advice to heed before your next adventure.</p>
+                    </div>
+                </div>
+                <div class="discoverDiv">
+                    <img class="discoverImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/22/ORB_AboutUs_Blog_BlackOwnedHotels_imgB_1040x585_20210722.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" />
+                    <div class=" discoverInner">
+                        <h3>Women-owned wineries we love</h3>
+                        <p>Eat, drink, and say hello to a lovely glass of pinot.</p>
+                    </div>
+                </div>
+                <div class="discoverDiv">
+                    <img class="discoverImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/22/ORB_AboutUs_Blog_BlackOwnedHotels_imgB_1040x585_20210722.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" />
+                    <div class=" discoverInner">
+                        <h3>Orbitz proudly sponsors IGLTA</h3>
+                        <p>Meet the org dedicated to advancing LGBTQ+ tourism.</p>
+                    </div>
+                </div>
+                <div class="discoverDiv">
+                    <img class="discoverImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/22/ORB_AboutUs_Blog_BlackOwnedHotels_imgB_1040x585_20210722.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" />
+                    <div class=" discoverInner">
+                        <h3>Tips for traveling with seniors</h3>
+                        <p>Ways to lend a helping hand (just in case they need one).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rewards">
+                <div>
+                    <img alt="" class="rewardImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/07/29/ORB_AboutUs_Bottom_App_imgB_900x386_20210729.jpg?impolicy=fcrop&amp;w=600&amp;h=257&amp;q=medium">
+                </div>
+                <div>
+                    <img alt="" class="rewardImg"
+                        src="https://forever.travel-assets.com/flex/flexmanager/images/2021/08/12/ORB_AboutUs_Bottom_RAF_imgB_900x386_20210812.jpg?impolicy=fcrop&amp;w=600&amp;h=257&amp;q=medium">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="one">
+        <div class="two">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="">About us</a></p>
+            <p><a href="">Jobs</a></p>
+            <p><a href="">List your property</a></p>
+            <p><a href="">Partnerships</a></p>
+            <p><a href="">Newsroom</a></p>
+            <p><a href="">Investor Relation</a></p>
+            <p><a href="">Site Map</a></p>
+            <p><a href="">Orbital Rewards</a></p>
+            <p><a href="">Advertising</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="">Hotels in United States</a></p>
+            <p><a href="">Vacation Rentals in United States</a></p>
+            <p><a href="">Cars Rentals in United States</a></p>
+            <p><a href="">Domestics Flights</a></p>
+            <p><a href="">Vacation Packages In United States</a></p>
+            <p><a href="">Orbitz Reviews</a></p>
+            <p><a href="">Orbitz Coupons</a</p>
+            <p><a href="">LGBTQ Travel</a></p>
+            <p><a href="">Unique Accommodation</a></p>
+            <p><a href="">Travel Blog</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="">Privacy Policy</a></p>
+            <p><a href="">Terms of Use</a></p>
+            <p><a href="">Orbitz Rewards Terms</a></p>
+            <p><a href="">Do not sell my personal information</a></p>
+        </div>
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="">Support</a></p>
+            <p><a href="">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="">Cancel your flight</a></p>
+            <p><a href="">Refund timelines,policies & processes</a>
+            </p>
+            <p><a href="">Use an Orbitz Coupon</a></p>
+        </div>
+    </div>
+    
+    <div class="three">
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+</body>
+
+</html>
