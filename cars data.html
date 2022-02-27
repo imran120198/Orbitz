@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Cars</title>
+
+    <style>
+        /* navbar */
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+            background-color: #00253c;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+        }
+
+        #navbar>div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+
+        #MoreTravel {
+            margin-top: -65px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #00253c;
+            border: 0px;
+            color: white;
+            margin-left: 55px;
+        }
+
+        #MoreTravel>option {
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            font-size: large;
+        }
+
+        #nav_2box {
+            text-align: right;
+        }
+
+        #nav_2box div {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+
+        #navbar img {
+            margin-top: -50px;
+            width: 169px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        #MoreTravel:hover {
+            color: teal;
+        }
+
+        #MoreTravel option:hover {
+            color: teal;
+        }
+
+        #nav_2box div:hover {
+            color: teal;
+        }
+
+        /* info */
+        .heading {
+            width: 70%;
+            margin: auto;
+            justify-content: center;
+            padding: 10px;
+            text-align: justify;
+        }
+
+        #searchFilter {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px !important;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        #sorter,
+        #searcher,
+        #rater {
+            padding: 10px;
+            width: 30%;
+        }
+
+        /* container */
+        #container {
+            display: grid;
+            width: 70%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 300px);
+            justify-content: center;
+            margin: 2% auto;
+            margin-top: 10px !important;
+            gap: 10px;
+            text-align: center;
+        }
+
+        #container>div {
+            justify-content: center;
+            height: 300px;
+            box-shadow: 2px 2px 5px 5px rgb(235, 235, 235);
+        }
+
+        #container>div>p {
+            font-size: 12px;
+            margin-top: -20px;
+            margin-bottom: -10px;
+        }
+
+        #alignPrice {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            line-height: 0.5em;
+        }
+
+        #imgAlign {
+            width: 100%;
+            justify-content: center;
+            height: 150px;
+            margin: auto;
+        }
+
+        #textAlign {
+            font-size: 10px;
+            color: gray;
+            margin-top: -12px;
+
+        }
+
+        #btnAlign {
+            background-color: #C83259;
+            color: #FFFFFF;
+            border-radius: 2px;
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+        }
+
+        /* footer */
+        .one {
+            height: 450px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-size: 14px;
+        }
+
+        .two>p {
+            margin-bottom: 30px;
+        }
+
+        .two>p>a {
+            text-decoration: none;
+            color: #007E8F;
+        }
+
+        .two>p>a:hover {
+            text-decoration: none;
+            color: #007E8F;
+            border-bottom: 1px solid #007E8F;
+        }
+
+        .imgFooter {
+            height: 22px;
+            width: 150px;
+            margin: 15px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            margin: auto;
+            margin-top: 150px !important;
+            text-align: center;
+            font-size: 12px;
+            color: #616161;
+        }
+
+        .three>hr {
+            width: 85%;
+            border-top: 1px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div id="navbar">
+
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo"
+                    id="homepageImg">
+            </div>
+
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Cars">Cars</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="nav_2box">
+            <div id="Espanol">Espanol</div>
+            <div id="listYourPriority">List your Property</div>
+            <div id="support">Support</div>
+            <div id="trips">Trips</div>
+            <div id="signIn">Sign in</div>
+        </div>
+
+
+    </div>
+
+    <!-- INFO -->
+    <div id="searchFilter">
+        <select id="sorter">
+            <option value="">Sort By Price</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+
+        <select id="rater">
+            <option value="">Sort By Rating</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+
+    </div>
+
+    <div class="heading">
+        <div class="info">
+            <h2>Rent Cars</h2>
+            <p>Rent cars for your holiday travels.</p>
+
+        </div>
+    </div>
+
+    <!-- table -->
+    <div id="container"></div>
+
+    <!-- footer -->
+    <div class="one">
+    
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="about us.html">About</a></p>
+            <p><a href="about us.html">Jobs</a></p>
+            <p><a href="about us.html">List your property</a></p>
+            <p><a href="about us.html">Partnerships</a></p>
+            <p><a href="about us.html">Newsroom</a></p>
+            <p><a href="about us.html">Investor Relation</a></p>
+            <p><a href="about us.html">Site Map</a></p>
+            <p><a href="about us.html">Orbital Rewards</a></p>
+            <p><a href="about us.html">Advertising</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="all hotels.html">Hotels in United States</a></p>
+            <p><a href="all hotels.html">Vacation Rentals in United States</a></p>
+            <p><a href="all hotels.html">Cars Rentals in United States</a></p>
+            <p><a href="all hotels.html">Domestics Flights</a></p>
+            <p><a href="all hotels.html">Vacation Packages In United States</a></p>
+            <p><a href="all hotels.html">Orbitz Reviews</a></p>
+            <p><a href="all hotels.html">Orbitz Coupons</a></p>
+            <p><a href="all hotels.html">LGBTQ Travel</a></p>
+            <p><a href="all hotels.html">Unique Accommodation</a></p>
+            <p><a href="all hotels.html">Travel Blog</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="privacy policy.html">Privacy Policy</a></p>
+            <p><a href="privacy policy.html">Terms of Use</a></p>
+            <p><a href="privacy policy.html">Orbitz Rewards Terms</a></p>
+            <p><a href="privacy policy.html">Do not sell my personal information</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="support.html">Support</a></p>
+            <p><a href="support.html">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="support.html">Cancel your flight</a></p>
+            <p><a href="support.html">Refund timelines,policies & processes</a></p>
+            <p><a href="support.html">Use an Orbitz Coupon</a></p>
+        </div>
+    
+    </div>
+    
+    <div class="three">
+        <hr>
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    // NAVBAR
+    document.querySelector("#homepageImg").addEventListener("click", openHomepage);
+        function openHomepage() {
+            event.preventDefault();
+            window.open("index.html", "_self");
+        }
+
+        var navbarSelect = document.querySelector("#MoreTravel");
+        navbarSelect.addEventListener("click", function () {
+            event.preventDefault();
+            if (navbarSelect.value == "Stays") {
+                window.open("all hotels.html", "_self");
+            }
+            else if (navbarSelect.value == "Cars") {
+                window.open("cars data.html", "_self");
+            }
+            else if (navbarSelect.value == "ThingsToDo") {
+                window.open("things to do.html", "_self");
+            }
+            else if (navbarSelect.value == "TravelBlog") {
+                window.open("https://www.orbitz.com/blog/", "_self");
+            }
+        })
+
+        document.querySelector("#Espanol").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#listYourPriority").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#support").addEventListener("click", function () {
+            window.open("support.html", "_self");
+        })
+
+        document.querySelector("#trips").addEventListener("click", function () {
+            window.open("trips.html", "_self");
+        })
+
+        document.querySelector("#signIn").addEventListener("click", function () {
+            window.open("create account.html", "_self");
+        })
+
+    // DATA MAPPING
+    var carsData = [
+            {
+                name: "Lamborghini",
+                dataType: "car",
+                img: "data:image/jpeg;base64,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",
+                price: 12000,
+                rating: 4.5,
+                location: "Vasanth Nagar",
+
+            },
+
+            {
+                name: "Maserati",
+                dataType: "car",
+                img: "https://imgd.aeplcdn.com/0x0/n/cw/ec/108971/mc20-exterior-right-front-three-quarter.jpeg?isig=0",
+                price: 15000,
+                rating: 4.0,
+                location: "Vasanth Nagar",
+            },
+
+            {
+                name: "Creta",
+                dataType: "car",
+                img: "https://images.hindustantimes.com/auto/img/2021/03/05/600x338/1363396_Wallpaper2_1614284698263_1614966771974.jpg",
+                price: 4000,
+                rating: 4.7,
+                location: "Vasanth Nagar",
+            },
+
+
+            {
+                name: "BMW ",
+                dataType: "car",
+                img: "https://wallpaperaccess.com/full/191738.jpg",
+                price: 15000,
+                rating: 4.6,
+                location: "Vasanth Nagar",
+            },
+
+            {
+                name: "Ferrari",
+                dataType: "car",
+                img: "https://media.wired.com/photos/5ceeed5b0bdd96c34c6174a3/master/pass/01_Ferrari_SF90_03.jpg",
+                price: 18000,
+                rating: 4.7,
+                location: "Vasanth Nagar",
+            },
+
+            {
+                name: "XUV 700 ",
+                dataType: "car",
+                img: "https://www.indiacarnews.com/wp-content/uploads/2021/08/Mahindra-XUV700-Maroon-Colour-1200x900.jpg",
+                price: 7000,
+                rating: 4.7,
+                location: "Vasanth Nagar",
+            },
+
+            {
+                name: "Kia",
+                dataType: "car",
+                img: "https://preview.thenewsmarket.com/Previews/kiam/StillAssets/400x300/421998_v7.jpeg",
+                price: 5000,
+                rating: 4.8,
+                location: " Sivanchetti Gardens",
+                price: 5600,
+            },
+
+            {
+                name: "Ferrari",
+                dataType: "car",
+                img: "https://imgd.aeplcdn.com/1200x900/n/cw/ec/49376/f8-tributo-exterior-right-front-three-quarter-11.jpeg?q=75",
+                price: 16000,
+                rating: 4.0,
+                location: "Halasuru, Bengaluru",
+            },
+
+            {
+                name: "Toyota Fortuner",
+                dataType: "car",
+                location: "Ashok Nagar, Bengaluru",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrJcCqoSODmGKBF-ihV2L0XScBxdnEBz6PCw&usqp=CAU",
+                price: 9000,
+                rating: 4.6
+
+            },
+
+            {
+                name: "Kia",
+                dataType: "car",
+                location: "Bengaluru",
+                img: "https://images.jdmagicbox.com/quickquotes/images_main/kia-seltos-htk-g-petrol-intelligency-blue-169302558-069ut.png",
+                price: 6000,
+                rating: 4.0
+
+            },
+
+            {
+                name: "BMW",
+                dataType: "car",
+                location: "Devenhalli",
+                img: "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=http://cms.haymarketindia.net/model/uploads/modelimages/X5ModelImage.jpg&w=730&h=484&q=75&c=1",
+                price: 14000,
+                rating: 4.7
+
+            },
+            
+            {
+                name: "XUV",
+                dataType: "car",
+                location: "Bengaluru",
+                img: "https://www.drivespark.com/img/2012/01/28-mahindra-xuv-500-delhi-300.jpg",
+                price: 6500,
+                rating: 4.4
+
+            }
+    ];
+
+    localStorage.setItem("carsData", JSON.stringify(carsData))
+
+        var carsData = JSON.parse(localStorage.getItem("carsData"));
+        displayData(carsData);
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var loggedInEmail;
+        var loggedInName;
+        currentUser.map(function (elem) {
+            loggedInEmail = elem.Email;
+            loggedInName = elem.FirstName;
+            //console.log(loggedInEmail,loggedInName);
+        })
+        var tripArr = JSON.parse(localStorage.getItem(loggedInEmail)) || [];
+        // console.log(carsData);
+
+        function displayData(carsData) {
+            document.querySelector("#container").innerHTML = "";
+            carsData.map(function (elem) {
+                var maindiv = document.createElement("div");
+
+                var img = document.createElement("img");
+                img.setAttribute("src", elem.img);
+                img.setAttribute("id", "imgAlign");
+
+                var name = document.createElement("h5");
+                name.innerText = elem.name;
+
+                var location = document.createElement("p");
+                location.innerText = elem.location;
+
+                var innerDiv = document.createElement("div")
+                //price & rating
+
+                var price = document.createElement("p");
+                price.innerText = elem.price;
+
+                var rating = document.createElement("p");
+                rating.innerText = elem.rating;
+
+                innerDiv.append(price, rating);
+                innerDiv.setAttribute("id", "alignPrice");
+                //price & rating text
+                var perNight = document.createElement("p");
+                perNight.innerText = "Per night";
+                perNight.setAttribute("id", "textAlign");
+
+                var ratingGiven = document.createElement("p");
+                ratingGiven.innerText = "Ratings";
+                ratingGiven.setAttribute("id", "textAlign")
+
+                var ratePara = document.createElement("div");
+                ratePara.append(perNight, ratingGiven);
+                ratePara.setAttribute("id", "alignPrice")
+                var bookBtn = document.createElement("button");
+                bookBtn.innerText = "Reserve";
+                bookBtn.setAttribute("id", "btnAlign")
+
+                bookBtn.addEventListener("click", function () {
+                    tripArr.push(elem);
+                    console.log(tripArr);
+                    localStorage.setItem(loggedInEmail, JSON.stringify(tripArr));
+
+                })
+
+                maindiv.append(img, name, location, innerDiv, ratePara, bookBtn);
+                document.querySelector("#container").append(maindiv);
+
+            });
+        }
+
+        document.querySelector("#sorter").addEventListener("click", sortByPrice);
+        function sortByPrice() {
+            carsData.map(function (elem) {
+                var sorting = document.querySelector("#sorter").value;
+                console.log(sorting);
+                if (sorting == "l2h") {
+                    carsData.sort(function (a, b) { return a.price - b.price })
+                    displayData(carsData)
+                }
+                else if (sorting == "h2l") {
+                    carsData.sort(function (a, b) { return b.price - a.price })
+                    displayData(carsData)
+                }
+            })
+        }
+
+        document.querySelector("#rater").addEventListener("click", sortByRating);
+        function sortByRating() {
+            carsData.map(function (elem) {
+                var rating = document.querySelector("#rater").value;
+                console.log(rating);
+                if (rating == "l2h") {
+                    carsData.sort(function (a, b) { return a.rating - b.rating })
+                    displayData(carsData)
+                }
+                else if (rating == "h2l") {
+                    carsData.sort(function (a, b) { return b.rating - a.rating })
+                    displayData(carsData)
+                }
+            })
+        }
+
+</script>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    
+    <style>
+        #one{
+            margin: 0;
+            height:1150px;
+            width:100%;
+        }
+
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #navbar{
+        width: 100%;
+        height: 72px;
+        color: whitesmoke;
+        background-color: #00253c;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        }
+
+        #navbar>div:first-child {   
+        display: flex;
+        }
+
+        #navbar>div:nth-child(2) {
+            display: flex;
+        }
+            
+        #navbar >div >div{
+        height: auto;
+        width: auto;
+        margin-top: auto;
+        display: flex;
+        }
+
+        #MoreTravel{
+        margin-top: -65px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #00253c;
+        border: 0px;
+        color: white;
+        margin-left: 55px;
+        }
+
+        #MoreTravel>option {
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            font-size: large;
+        }
+
+        #nav_2box{
+        text-align: right;
+        }
+
+        #nav_2box div{
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        }
+
+
+        #navbar img{
+        margin-top: -50px;
+        width: 169px;
+        height: 32px;
+        cursor: pointer;
+        }
+
+        #MoreTravel:hover{color: teal;}
+        #MoreTravel option:hover{color: teal;}
+        #nav_2box div:hover{color: teal;}
+
+    #two{
+        height:100px;
+        width:100%;
+        background-image:url("https://media.istockphoto.com/photos/tropical-beach-palm-trees-sea-wave-and-white-sand-picture-id1300296030");
+        display:flex;
+    }
+
+    #two > div{
+        height:100px;
+        width:50%;
+        color:white;
+        text-align:center;
+    }
+
+    #search{
+        height:40px;
+        width:50%;
+        margin:25px 0px 0px 0px;
+        margin-right: 60%;
+    }
+
+    #three{
+        height:200px;
+        width:100%;
+        background-color: rgb(49,123,194);
+    }
+
+    #three > div{
+        height:50px;
+        width:70%;
+        margin:auto;
+        display:flex;
+    }
+
+    #three > div > div{
+        height:50px;
+        width:20%;
+        margin-right:20px;
+        background-color:white;
+        text-align: center;
+    }
+
+    .alert{
+        border:1px solid black;
+        height:70px;
+        width:80%;
+        margin: auto;
+        margin-top: 30px !important;
+        /* margin:30px 0px 30px 70px; */
+        background-color: red;
+        color: white;
+        display:flex;
+    }
+
+    .alert img{
+        height:70px;
+        width:60px;
+    }
+
+    #four{
+        height:1400px;
+        width:80%;
+        display:flex;
+        margin:30px 0px 0px 150px;
+        background-color: white;
+    }
+
+    #first_div{
+        height:500px;
+        width:20%;
+    }
+
+    #second_div{
+        height:1000px;
+        width:80%;
+    }
+
+    #first_div > div{
+        height:45px;
+        width:100%;
+        margin:0px 0px 5px 0px;
+        font-size:20px;
+        background-color:white;
+    }
+
+    #first_div img{
+        height:40px;
+        width:50px;
+    }
+
+    #second_div > div{
+        height:55px;
+        width:90%;
+        text-align: left;
+        background-color:white;
+        margin:auto;
+        font-size:25px;
+        color:blue;
+        font-weight: bolder;
+        margin:0px 0px 5px 30px;
+    }
+
+    .one {
+            height: 450px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-size: 14px;
+        }
+
+        .two>p {
+            margin-bottom: 30px;
+        }
+
+        .two>p>a {
+            text-decoration: none;
+            color: #007E8F;
+        }
+
+        .two>p>a:hover {
+            text-decoration: none;
+            color: #007E8F;
+            border-bottom: 1px solid #007E8F;
+        }
+
+        .imgFooter {
+            height: 22px;
+            width: 150px;
+            margin: 15px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            margin: auto;
+            margin-top: 150px !important;
+            text-align: center;
+            font-size: 12px;
+            color: #616161;
+        }
+
+        .three>hr {
+            width: 85%;
+            border-top: 1px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <div id="navbar">
+        
+            <div>
+                <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo"
+                        id="homepageImg">
+                </div>
+        
+                <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                        <option value="">More Travel</option>
+                        <option value="Stays">Stays</option>
+                        <option value="Cars">Cars</option>
+                        <option value="ThingsToDo">Things to do</option>
+                        <option value="TravelBlog">Travel blog</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div id="nav_2box">
+                <div id="Espanol">Espanol</div>
+                <div id="listYourPriority">List your Property</div>
+                <div id="support">Support</div>
+                <div id="trips">Trips</div>
+                <div id="signIn">Sign in</div>
+            </div>
+        
+        
+        </div>
+
+        <div id="two">
+            <div>
+                <h1><b>Customer Service</b></h1>
+            </div>
+            <div>
+                <input id="search" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div id="three">
+            <div>
+                <p>Sign in for help with your trips</p>
+            </div>
+            <div>
+                <h2><b>Your Virtual Agent is here to help.</b></h2>
+            </div>
+            <div>
+                <div>
+                    <h3>Cancel your trip</h3>
+                </div>
+                <div>
+                    <h3>Change your plan</h3>
+                </div>
+                <div>
+                    <h3>Ask about Refund</h3>
+                </div>
+                <div>
+                    <h3>Chat Now</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert">
+            <div>
+                <img
+                    src="data:image/jpeg;base64,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">
+            </div>
+            <div>
+                <h3>It's taking longer than usual to reach our agents by phone or chat. Try canceling or changing your
+                    flights by connecting with the Virtual Agent or quickly get answers to your questions from page.
+                    Thanks for your patience.
+            </div>
+        </div>
+
+        <div id="four">
+            <div id="first_div">
+                <div>
+                    <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQy-S428Qypmqhe_w4TbU_oZ_-e021i6CUoIk89Vi4V6RbSKm4R">
+                    Flights
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQmAbkSlLvxUrAHutyxjAZWK0_ZkgqEDOT_kdsmUtb9173egrlX">
+                    Hotels
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTAhSEBKY93JlIIXvj98od0C2CTHgjstlZ1NBBOWyxKSCbsp2AV">
+                    Packages
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMlJi4_zlPYK5X9HEic9I_ofKFpBDLH-0GJ1NBmXKGPYENlSnl">
+                    Cars
+                </div>
+                <div>
+                    <img src="https://cdn4.iconfinder.com/data/icons/types-of-travel/48/Ryan-20-512.png">
+                    Cruises
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQkcY7PgAD25wVur8CGqKH2A4tJ4NIB-qE3ecuimX20PgD_LMJj">
+                    Activities
+                </div>
+                <div>
+                    <img
+                        src="data:image/jpeg;base64,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">
+                    Orbitz Rewards
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTzhi5Mk0bwGlAcBvHL81qcPHlwB4CK8VIuC5bfSKBcfbxdmXNR">
+                    Other
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTJq4qzosGEuDkgcRLyAXxfuf7P-p_ff43cLGD6ly8-arzY-gRJ">
+                    Your Experience
+                </div>
+                <div>
+                    <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQFmH2uBmmj7WrFTc3B68Hs5clSvklrqE_XHvJ9CvsKB_YLw1cx">
+                    Travel Alerts
+                </div>
+            </div>
+            <div id="second_div">
+                <div>Refund timelines, policies & process</div>
+                <div>Book a flight using an airline credit</div>
+                <div>Gift cars scams</div>
+                <div>Flight insurance</div>
+                <div>Cancel your vacation package</div>
+                <div>Hotel payment options</div>
+                <div>Orbitz Rewards membership and benefits</div>
+                <div>Chang your flight</div>
+                <div>Low-cost airline booking</div>
+                <div>About Unreal Deals and Package saving</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="one">
+    
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="about us.html">About</a></p>
+            <p><a href="about us.html">Jobs</a></p>
+            <p><a href="about us.html">List your property</a></p>
+            <p><a href="about us.html">Partnerships</a></p>
+            <p><a href="about us.html">Newsroom</a></p>
+            <p><a href="about us.html">Investor Relation</a></p>
+            <p><a href="about us.html">Site Map</a></p>
+            <p><a href="about us.html">Orbital Rewards</a></p>
+            <p><a href="about us.html">Advertising</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="all hotels.html">Hotels in United States</a></p>
+            <p><a href="all hotels.html">Vacation Rentals in United States</a></p>
+            <p><a href="all hotels.html">Cars Rentals in United States</a></p>
+            <p><a href="all hotels.html">Domestics Flights</a></p>
+            <p><a href="all hotels.html">Vacation Packages In United States</a></p>
+            <p><a href="all hotels.html">Orbitz Reviews</a></p>
+            <p><a href="all hotels.html">Orbitz Coupons</a></p>
+            <p><a href="all hotels.html">LGBTQ Travel</a></p>
+            <p><a href="all hotels.html">Unique Accommodation</a></p>
+            <p><a href="all hotels.html">Travel Blog</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="privacy policy.html">Privacy Policy</a></p>
+            <p><a href="privacy policy.html">Terms of Use</a></p>
+            <p><a href="privacy policy.html">Orbitz Rewards Terms</a></p>
+            <p><a href="privacy policy.html">Do not sell my personal information</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="support.html">Support</a></p>
+            <p><a href="support.html">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="support.html">Cancel your flight</a></p>
+            <p><a href="support.html">Refund timelines,policies & processes</a></p>
+            <p><a href="support.html">Use an Orbitz Coupon</a></p>
+        </div>
+    
+    </div>
+    
+    <div class="three">
+        <hr>
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.querySelector("#homepageImg").addEventListener("click", openHomepage);
+        function openHomepage() {
+            event.preventDefault();
+            window.open("index.html", "_self");
+        }
+
+        var navbarSelect = document.querySelector("#MoreTravel");
+        navbarSelect.addEventListener("click", function () {
+            event.preventDefault();
+            if (navbarSelect.value == "Stays") {
+                window.open("all hotels.html", "_self");
+            }
+            else if (navbarSelect.value == "Cars") {
+                window.open("cars data.html", "_self");
+            }
+            else if (navbarSelect.value == "ThingsToDo") {
+                window.open("things to do.html", "_self");
+            }
+            else if (navbarSelect.value == "TravelBlog") {
+                window.open("https://www.orbitz.com/blog/", "_self");
+            }
+        })
+
+        document.querySelector("#Espanol").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#listYourPriority").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#support").addEventListener("click", function () {
+            window.open("support.html", "_self");
+        })
+
+        document.querySelector("#trips").addEventListener("click", function () {
+            window.open("trips.html", "_self");
+        })
+
+        document.querySelector("#signIn").addEventListener("click", function () {
+            window.open("create account.html", "_self");
+        })
+</script>
