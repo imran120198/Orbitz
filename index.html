@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbitz hotel deals, cheap vacations and rental cars</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0px;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* NAVBAR */
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+            background-color: #00253c;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+        }
+
+        #navbar>div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+
+        #MoreTravel {
+            margin-top: -65px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #00253c;
+            border: 0px;
+            color: white;
+            margin-left: 55px;
+            cursor: pointer;
+        }
+
+        #MoreTravel>option {
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            font-size: large;
+        }
+
+        #nav_2box {
+            text-align: right;
+        }
+
+        #nav_2box div {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+
+        #navbar img {
+            margin-top: -50px;
+            width: 169px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        #MoreTravel:hover {
+            color: teal;
+        }
+
+        #MoreTravel option:hover {
+            color: teal;
+        }
+
+        #nav_2box div:hover {
+            color: teal;
+        }
+
+        /* HEADER */
+        #headerDiv {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh");
+            position: absolute;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 485px;
+            width: 100%;
+            margin: 0;
+        }
+
+        #staysDiv {
+            width: 80%;
+            background-color: white;
+            border: 0px;
+            height: fit-content;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+            position: relative;
+        }
+
+        #btnsDiv {
+            width: 80%;
+            background-color: white;
+            border: 0px;
+            height: fit-content;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            margin-top: 5% !important;
+        }
+
+        #headerBtns {
+            width: 50%;
+            text-align: center;
+            display: flex;
+            margin: auto;
+        }
+
+        #headerBtns>button {
+            border: 0px;
+            font-weight: bold;
+            background-color: white;
+            ;
+            color: #616161;
+            width: 30%;
+        }
+
+        #headerBtns>button:hover {
+            border: 0px;
+            background-color: white;
+            ;
+            color: #616161;
+            width: 30%;
+            border-bottom: 2px solid #616161;
+        }
+
+        #headerBtns>button:focus {
+            border: 0px;
+            background-color: white;
+            ;
+            color: teal;
+            width: 30%;
+            border-bottom: 2px solid teal;
+        }
+
+        #staysDiv>#staysForm {
+            display: grid;
+            width: 90%;
+            grid-template-columns: 40% 15% 15% 30%;
+            gap: 20px;
+            margin-left: 30px;
+            margin-top: -30px;
+            color: #616161;
+        }
+
+        #staysDiv>#staysForm>#location {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #staysDiv>#staysForm>#checkin {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #staysDiv>#staysForm>#checkout {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #staysDiv>#staysForm>#guest {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #staysDiv>#searchBtn {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            width: 15%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #staysDiv>#searchBtn:hover {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            filter: brightness(120%);
+            width: 15%;
+            padding: 15px;
+            font-size: large;
+            text-align: center;
+        }
+
+        i {
+            background-color: white;
+            color: #616161;
+            font-size: large;
+            border: 0px;
+            padding: 10px;
+        }
+
+        #location>input,
+        #checkin>div>input,
+        #checkout>div>input,
+        #guest>div>div>input {
+            background-color: white;
+            overflow: hidden;
+            border: 0px;
+            color: #616161;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        #checkin>div>input,
+        #checkout>div>input {
+            width: 50%;
+            border-bottom: 1px solid gray;
+        }
+
+        #guest>div>div {
+            display: flex;
+        }
+
+        #guest>div>div>input {
+            width: 30%;
+            margin-left: 50px;
+            border-bottom: 1px solid gray;
+        }
+
+        #checkin>div>p,
+        #checkout>div>p,
+        #guest>div>p {
+            margin: 0px;
+        }
+
+        #carsDiv {
+            width: 80%;
+            display: none;
+            background-color: white;
+            border: 0px;
+            height: fit-content;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+            position: relative;
+        }
+
+        #carsDiv>#carsForm {
+            display: grid;
+            width: 90%;
+            grid-template-columns: 50% 20% 20%;
+            gap: 20px;
+            margin-left: 70px;
+            margin-top: -30px;
+            color: #616161;
+        }
+
+        #carsDiv>#carsForm>#pickUpLocation {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #carsDiv>#carsForm>#pickup {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #carsDiv>#carsForm>#dropoff {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #carsDiv>#searchCars {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            width: 15%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #carsDiv>#searchCars:hover {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            filter: brightness(120%);
+            width: 15%;
+            padding: 15px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #pickUpLocation>input,
+        #pickup>div>input,
+        #dropoff>div>input {
+            background-color: white;
+            overflow: hidden;
+            border: 0px;
+            color: #616161;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        #pickup>div>input,
+        #dropoff>div>input {
+            width: 50%;
+            border-bottom: 1px solid gray;
+        }
+
+        #pickup>div>p,
+        #dropoff>div>p {
+            margin: 0px;
+        }
+
+        #todoDiv {
+            width: 80%;
+            display: none;
+            background-color: white;
+            border: 0px;
+            height: fit-content;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+            position: relative;
+        }
+
+        #todoDiv>#todoForm {
+            display: grid;
+            width: 90%;
+            grid-template-columns: 50% 20% 20%;
+            gap: 20px;
+            margin-left: 70px;
+            margin-top: -30px;
+            color: #616161;
+        }
+
+        #todoDiv>#todoForm>#todoLocation {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #todoDiv>#todoForm>#todoStart {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #todoDiv>#todoForm>#todoEnd {
+            display: flex;
+            border: 1px solid #616161;
+            height: 60px;
+            align-items: center;
+        }
+
+        #todoDiv>#todoSearch {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            width: 15%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #todoDiv>#todoSearch:hover {
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            filter: brightness(120%);
+            width: 15%;
+            padding: 15px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #todoLocation>input,
+        #todoStart>div>input,
+        #todoEnd>div>input {
+            background-color: white;
+            overflow: hidden;
+            border: 0px;
+            color: #616161;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        #todoStart>div>input,
+        #todoEnd>div>input {
+            width: 50%;
+            border-bottom: 1px solid gray;
+        }
+
+        #todoStart>div>p,
+        #todoEnd>div>p {
+            margin: 0px;
+        }
+
+        /* PAGE 1 MID DIV 1 */
+        #midDiv1stDiv {
+            margin-top: 550px;
+            position: relative;
+        }
+
+        #offersDiv {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: auto;
+        }
+
+        #offersDiv>a {
+            display: block;
+        }
+
+        #offersDiv>a>div {
+            height: 154px;
+            width: 384px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        }
+
+        #offersDiv>a>#lgbtq {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh");
+            background-size: 100%;
+
+        }
+
+        #offersDiv>a>#orbucks {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh");
+            background-size: 100%;
+        }
+
+        #offersDiv>a>#insider {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh");
+            background-size: 100%;
+        }
+
+        #offersDiv>div>img {
+            width: 100%;
+        }
+
+        #featuredOffers {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px !important;
+        }
+
+        #featuredOffers>h2 {
+            font-size: 28px;
+        }
+
+        #featuredOffers>#featuredDiv1 {
+            display: grid;
+            box-sizing: border-box;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: auto;
+            margin-top: -20px !important;
+        }
+
+        #featuredDiv1>a {
+            height: 180px;
+            width: 92%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+            text-decoration: none;
+        }
+
+        #featuredDiv1>a>div>div>h3 {
+            margin-bottom: -20px;
+        }
+
+        #lastMinDeals {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-size: 100%;
+            color: white;
+            text-shadow: 1px 1px black;
+            display: flex;
+            align-items: flex-end;
+            padding-left: 20px;
+            padding-top: 102px;
+            cursor: pointer;
+        }
+
+        #allIncResorts {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-size: 100%;
+            color: white;
+            text-shadow: 1px 1px black;
+            display: flex;
+            align-items: flex-end;
+            padding-left: 20px;
+            padding-top: 102px;
+            cursor: pointer;
+        }
+
+        #insiderPrices {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-size: 100%;
+            color: white;
+            text-shadow: 1px 1px black;
+            display: flex;
+            align-items: flex-end;
+            padding-left: 20px;
+            padding-top: 102px;
+            cursor: pointer;
+        }
+
+        #jetReset {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-size: 100%;
+            color: white;
+            text-shadow: 1px 1px black;
+            display: flex;
+            align-items: flex-end;
+            padding-left: 20px;
+            padding-top: 102px;
+            cursor: pointer;
+        }
+
+        #featuredDiv2 {
+            display: grid;
+            margin: auto;
+            margin-top: 50px !important;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 152px);
+            column-gap: 30px;
+            row-gap: 20px;
+            grid-template-areas:
+                "one one two"
+                "one one three";
+        }
+
+        #featuredDiv2>div {
+            border: 1px solid grey;
+        }
+
+        #beachDeals {
+            grid-area: one;
+            cursor: pointer;
+        }
+
+        #beachDeals>img {
+            width: 100%;
+            height: 75%;
+        }
+
+        #beachDeals>h2 {
+            margin-bottom: -15px;
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+
+        #beachDeals>p {
+            margin-left: 15px;
+        }
+
+        #under499 {
+            grid-area: two;
+            display: flex;
+            cursor: pointer;
+        }
+
+        #under499>img {
+            width: 30%;
+        }
+
+        #under499>div {
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: justify;
+        }
+
+        #flexibleStays {
+            grid-area: three;
+            cursor: pointer;
+            display: flex;
+        }
+
+        #flexibleStays>img {
+            width: 30%;
+        }
+
+        #flexibleStays>div {
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: justify;
+        }
+
+        /* PAGE 1 MID DIV 2 */
+        #midFirstContainer {
+            padding: 12px;
+            width: 80%;
+            margin: auto;
+        }
+
+        #midFirstContainer>h2 {
+            font-size: 28px;
+        }
+
+        #operateTrip {
+            display: flex;
+            margin-top: -10px;
+            justify-content: space-between;
+        }
+
+        #operateSubDiv {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid;
+            padding: 12px;
+            height: 100px;
+            width: 370px;
+            cursor: pointer;
+        }
+
+        #operateSubDiv>.textDiv>p {
+            font-size: 14px;
+        }
+
+        #operateSubDiv>.imgDiv>.imagePlaceholder {
+            width: 24px;
+            aspect-ratio: 1/1;
+            color: black;
+        }
+
+        #midSecondContainer {
+            padding: 12px;
+            width: 80%;
+            margin: auto;
+        }
+
+        #midSecondContainer>h2 {
+            font-size: 28px;
+        }
+
+        #tips {
+            display: flex;
+            margin-top: -10px;
+            justify-content: space-between;
+        }
+
+        #tipsSubDiv {
+            padding: 24px;
+            padding-top: 100px !important;
+            box-sizing: border-box;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        #tips>#tipsSubDiv:first-child {
+            width: 48%;
+            height: 280px;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9e/Mount_Gould_from_Grinnell_Glacier_Trail_2.JPG");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        #tips>#tipsSubDiv:nth-child(2) {
+            width: 48%;
+            height: 280px;
+            background-image: url("https://www.theclimategroup.org/sites/default/files/styles/hero_header/public/2020-10/pacific-coast-highway-highway-1-at-southern-end-of-big-sur-california_37835943186_o.jpg?itok=_CGkF2p1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        #tipsSubDiv>#textDiv>h2 {
+            font-size: 22px;
+            color: white;
+        }
+
+        #tipsSubDiv>#textDiv>p {
+            font-size: 16px;
+            color: white;
+        }
+
+        #tipsSubDiv>#textDiv>button {
+            font-size: 16px;
+            font-weight: 500;
+            width: 120px;
+            color: teal;
+            background-color: white;
+            border: 0px;
+            border-radius: 2px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #tipsSubDiv>#textDiv>button:hover {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            background-color: teal;
+            border: 0px;
+            border-radius: 2px;
+            padding: 10px;
+        }
+
+        #midThirdContainer {
+            padding: 12px;
+            width: 80%;
+            margin: auto;
+        }
+
+        #selectGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 50px;
+            row-gap: 20px;
+            margin: auto;
+        }
+
+        #selectGrid>select {
+            padding: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        .one {
+            height: 450px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-size: 14px;
+        }
+
+        .two>p {
+            margin-bottom: 30px;
+        }
+
+        .two>p>a {
+            text-decoration: none;
+            color: #007E8F;
+        }
+
+        .two>p>a:hover {
+            text-decoration: none;
+            color: #007E8F;
+            border-bottom: 1px solid #007E8F;
+        }
+
+        .imgFooter {
+            height: 22px;
+            width: 150px;
+            margin: 15px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            margin: auto;
+            margin-top: 150px !important;
+            text-align: center;
+            font-size: 12px;
+            color: #616161;
+        }
+
+        .three>hr {
+            width: 85%;
+            border-top: 1px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar">
+
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo" id="homepageImg">
+            </div>
+
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Cars">Cars</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="nav_2box">
+            <div id="Espanol">Espanol</div>
+            <div id="listYourPriority">List your Property</div>
+            <div id="support">Support</div>
+            <div id="trips">Trips</div>
+            <div id="signIn">Sign in</div>
+            <div id="helloUser"></div>
+            <div id="signOut"></div>
+        </div>
+
+    </div>
+
+    <!-- HEADER -->
+    <div id="headerDiv">
+    
+        <div id="btnsDiv">
+            <div id="headerBtns">
+                <button id="staysbtn">Stays</button>
+                <button id="carsbtn">Cars</button>
+                <button id="todobtn">Things to do</button>
+            </div>
+    
+            <hr>
+        </div>
+    
+        <!-- Div 1: Stays Div -->
+        <div id="staysDiv">
+    
+            <div id="staysForm">
+    
+                <div id="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Going to" id="staysLocation">
+                </div>
+    
+                <div id="checkin">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>Check in</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="checkinDate">
+                    </div>
+                </div>
+    
+                <div id="checkout">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>Check out</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="checkoutDate">
+                    </div>
+                </div>
+    
+                <div id="guest">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <p>Travelers</p>
+                        <div>
+                            <input type="number" placeholder="Rooms" id="numberofRooms">
+                            <input type="number" placeholder="Guests" id="numberofGuests">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <button id="searchBtn">Search</button>
+    
+        </div>
+    
+        <!-- Div 2: Cars Div -->
+        <div id="carsDiv">
+    
+            <div id="carsForm">
+    
+                <div id="pickUpLocation">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Pick up city" id="pickupCity">
+                </div>
+    
+                <div id="pickup">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>Pick up</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="pickupDate">
+                    </div>
+                </div>
+    
+                <div id="dropoff">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>Drop off</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="dropoffDate">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <button id="searchCars">Search</button>
+    
+        </div>
+    
+        <!-- Div 3: Things to do Div -->
+        <div id="todoDiv">
+    
+            <div id="todoForm">
+    
+                <div id="todoLocation">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Things to do in" id="todoCity">
+                </div>
+    
+                <div id="todoStart">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>From</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="todofromDate">
+                    </div>
+                </div>
+    
+                <div id="todoEnd">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <p>To</p>
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                            id="todotoDate">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <button id="todoSearch">Search</button>
+    
+        </div>
+    
+    </div>
+
+    <!-- MID DIV 1ST DIV -->
+    <div id="midDiv1stDiv">
+        <!-- CONTAINER 1 -->
+        <div id="offersDiv">
+            <a href="all hotels.html">
+                <div id="lgbtq"></div>
+            </a>
+            <a href="all hotels.html">
+                <div id="orbucks"></div>
+            </a>
+            <a href="all hotels.html">
+                <div id="insider"></div>
+            </a>
+        </div>
+
+        <!-- CONTAINER 2 -->
+        <div id="featuredOffers">
+
+            <h2>Featured offers</h2>
+
+            <div id="featuredDiv1">
+                <a href="last minute deals.html">
+                <div id="lastMinDeals">
+                    <div>
+                        <h3>Last minute deals</h3>
+                        <p>Gateaway today</p>
+                    </div>
+                </div>
+                </a>
+                <a href="last minute deals.html">
+                <div id="allIncResorts">
+                    <div>
+                        <h3>All inclusive resorts</h3>
+                        <p>Enjoy sun and fun</p>
+                    </div>
+                </div>
+                </a>
+                <a href="last minute deals.html">
+                <div id="insiderPrices">
+                    <div>
+                        <h3>Insider Prices</h3>
+                        <p>Members get rewarded</p>
+                    </div>
+                </div>
+                </a>
+                <a href="last minute deals.html">
+                <div id="jetReset">
+                    <div>
+                        <h3>Jest and reset</h3>
+                        <p>Fly south for the winter</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div id="featuredDiv2">
+                <div id="beachDeals">
+                    <img src="https://tpc.googlesyndication.com/simgad/15161619135586249935?" alt="">
+                    <h2>Beach destination deals</h2>
+                    <p>However you like to enjoy your time in the sun, you can enjoy it with savings.</p>
+                </div>
+                <div id="under499">
+                    <img src="https://tpc.googlesyndication.com/simgad/13749818791191237460?" alt="">
+                    <div>
+                        <h2>Deals under $499</h2>
+                        <p>Affordable fares are here, because you've waited a long time for this..</p>
+                    </div>
+                </div>
+                <div id="flexibleStays">
+                    <img src="https://tpc.googlesyndication.com/simgad/10254388981312609981?" alt="">
+                    <div>
+                        <h2>Flexible stays</h2>
+                        <p>Flexible bookings are here, with free cancelation option!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 1 MID DIV 2 -->
+
+    <!-- first container -->
+    <div id="midFirstContainer">
+
+        <h2>Here to help keep you on the move</h2>
+
+        <div id="operateTrip">
+
+            <div id="operateSubDiv">
+                <div class="textDiv">
+                    <h3>Change or cancel a trip</h3>
+                    <p>Make updates to your itenerary or cancel your trip</p>
+                </div>
+                <div class="imgDiv">
+                    <div class="imagePlaceholder">
+                        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__mode_edit.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="operateSubDiv">
+                <div class="textDiv">
+                    <h3>Use a credit or coupan</h3>
+                    <p>Apply a coupan code or credit to a new trip</p>
+                </div>
+                <div class="imgDiv">
+                    <div class="imagePlaceholder">
+                        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__monetization_on.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="operateSubDiv">
+                <div class="textDiv">
+                    <h3>Track your refund</h3>
+                    <p>Check the status of a refund currently in process</p>
+                </div>
+                <div class="imgDiv">
+                    <div class="imagePlaceholder">
+                        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__chat.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- second container -->
+    <div id="midSecondContainer">
+
+        <h2>Traveling tips</h2>
+
+        <div id="tips">
+
+            <div id="tipsSubDiv">
+                <div id="textDiv">
+                    <h2>National parks</h2>
+                    <p>There is plenty to keep you busy.</p>
+                    <button id="nationalPark">Learn more</button>
+                </div>
+            </div>
+
+            <div id="tipsSubDiv">
+                <div id="textDiv">
+                    <h2>The perfect road trip</h2>
+                    <p>Find an adventure for every season.</p>
+                    <button id="roadTrip">Read on</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- third container -->
+    <div id="midThirdContainer">
+
+        <h2>More destinations</h2>
+
+        <div id="selectGrid">
+            <select id="deals">
+                <option value="">Destination deals</option>
+                <option value="1">Vacation package deals</option>
+                <option value="2">All our destinations</option>
+                <option value="3">Last minute travel deals</option>
+                <option value="4">Orbitz coupans</option>
+            </select>
+
+            <select id="beach">
+                <option value="">Top hotel beach destinations</option>
+                <option value="1">Atlantic city hotels</option>
+                <option value="2">San Diego hotels</option>
+                <option value="3">Verginia beach hotels</option>
+                <option value="4">Honolulu hotels</option>
+            </select>
+
+            <select id="city">
+                <option value="">Top hotel city destinations</option>
+                <option value="1">Austin hotels</option>
+                <option value="2">Dallas hotels</option>
+                <option value="3">Las Vegas hotels</option>
+                <option value="4">Phoenix hotels</option>
+            </select>
+
+            <select id="vacation">
+                <option value="">Top vacation destinations</option>
+                <option value="1">Hawaii vacations</option>
+                <option value="2">Las Vegas vacations</option>
+                <option value="3">Disneyland vacations</option>
+                <option value="4">Costa Rica vacations</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="one">
+
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="about us.html">About</a></p>
+            <p><a href="about us.html">Jobs</a></p>
+            <p><a href="about us.html">List your property</a></p>
+            <p><a href="about us.html">Partnerships</a></p>
+            <p><a href="about us.html">Newsroom</a></p>
+            <p><a href="about us.html">Investor Relation</a></p>
+            <p><a href="about us.html">Site Map</a></p>
+            <p><a href="about us.html">Orbital Rewards</a></p>
+            <p><a href="about us.html">Advertising</a></p>
+        </div>
+
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="all hotels.html">Hotels in United States</a></p>
+            <p><a href="all hotels.html">Vacation Rentals in United States</a></p>
+            <p><a href="all hotels.html">Cars Rentals in United States</a></p>
+            <p><a href="all hotels.html">Domestics Flights</a></p>
+            <p><a href="all hotels.html">Vacation Packages In United States</a></p>
+            <p><a href="all hotels.html">Orbitz Reviews</a></p>
+            <p><a href="all hotels.html">Orbitz Coupons</a></p>
+            <p><a href="all hotels.html">LGBTQ Travel</a></p>
+            <p><a href="all hotels.html">Unique Accommodation</a></p>
+            <p><a href="all hotels.html">Travel Blog</a></p>
+        </div>
+
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="privacy policy.html">Privacy Policy</a></p>
+            <p><a href="privacy policy.html">Terms of Use</a></p>
+            <p><a href="privacy policy.html">Orbitz Rewards Terms</a></p>
+            <p><a href="privacy policy.html">Do not sell my personal information</a></p>
+        </div>
+
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="support.html">Support</a></p>
+            <p><a href="support.html">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="support.html">Cancel your flight</a></p>
+            <p><a href="support.html">Refund timelines,policies & processes</a></p>
+            <p><a href="support.html">Use an Orbitz Coupon</a></p>
+        </div>
+
+    </div>
+
+    <div class="three">
+        <hr>
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    // NAVBAR
+    document.querySelector("#homepageImg").addEventListener("click", openHomepage);
+    function openHomepage() {
+        event.preventDefault();
+        window.open("index.html","_self");
+    }
+
+    var navbarSelect = document.querySelector("#MoreTravel");
+    navbarSelect.addEventListener("click", function(){
+        event.preventDefault();
+        if (navbarSelect.value == "Stays") {
+            window.open("all hotels.html", "_self");
+        }
+        else if (navbarSelect.value == "Cars") {
+            window.open("cars data.html", "_self");
+        }
+        else if (navbarSelect.value == "ThingsToDo") {
+            window.open("things to do.html", "_self");
+        }
+        else if (navbarSelect.value == "TravelBlog") {
+            window.open("https://www.orbitz.com/blog/", "_self");
+        }
+    })
+
+    document.querySelector("#Espanol").addEventListener("click", function(){
+        alert("Update yet to be added!");
+    })
+
+    document.querySelector("#listYourPriority").addEventListener("click", function () {
+            alert("Update yet to be added!");
+    })
+
+    document.querySelector("#support").addEventListener("click", function () {
+            window.open("support.html", "_self");
+    })
+
+    document.querySelector("#trips").addEventListener("click", function () {
+            window.open("trips.html", "_self");
+    })
+
+    document.querySelector("#signIn").addEventListener("click", function () {
+            window.open("signin.html", "_self");
+    })
+
+    document.querySelector("#helloUser").style.display = "none";
+    document.querySelector("#signOut").style.display = "none";
+
+    var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var loggedInEmail;
+        var loggedInName;
+
+        currentUser.map(function (elem) {
+            loggedInEmail = elem.Email;
+            loggedInName = elem.FirstName;
+            //console.log(loggedInEmail,loggedInName);
+        })
+
+    if(currentUser.length > 0){
+        document.querySelector("#signIn").style.display = "none";
+        document.querySelector("#helloUser").innerText = "Hello, " + loggedInName;
+        document.querySelector("#helloUser").style.display = "block";
+        document.querySelector("#signOut").innerText = "Sign out";
+        document.querySelector("#signOut").style.display = "block";
+        document.querySelector("#signOut").addEventListener("click", function(){
+            event.preventDefault();
+            localStorage.removeItem("currentUser");
+            document.querySelector("#signIn").style.display = "block";
+            document.querySelector("#helloUser").style.display = "none";
+            document.querySelector("#signOut").style.display = "none";
+        })
+    }
+
+    // HEADER
+    document.querySelector("#staysbtn").addEventListener("click", displayDiv1);
+        function displayDiv1() {
+            event.preventDefault();
+            console.log(event.target);
+            var d1 = document.querySelector("#staysDiv");
+            var d2 = document.querySelector("#carsDiv");
+            var d3 = document.querySelector("#todoDiv");
+            d1.style.display = "block";
+            d2.style.display = "none";
+            d3.style.display = "none";
+        }
+
+        document.querySelector("#carsbtn").addEventListener("click", displayDiv2);
+        function displayDiv2() {
+            event.preventDefault();
+            console.log(event.target);
+            var d1 = document.querySelector("#staysDiv");
+            var d2 = document.querySelector("#carsDiv");
+            var d3 = document.querySelector("#todoDiv");
+            d1.style.display = "none";
+            d2.style.display = "block";
+            d3.style.display = "none";
+        }
+
+        document.querySelector("#todobtn").addEventListener("click", displayDiv3);
+        function displayDiv3() {
+            event.preventDefault();
+            console.log(event.target);
+            var d1 = document.querySelector("#staysDiv");
+            var d2 = document.querySelector("#carsDiv");
+            var d3 = document.querySelector("#todoDiv");
+            d1.style.display = "none";
+            d2.style.display = "none";
+            d3.style.display = "block";
+        }
+
+        var headerInfo;
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var loggedInEmail;
+        var loggedInName;
+        currentUser.map(function (elem) {
+            loggedInEmail = elem.Email;
+            loggedInName = elem.FirstName;
+            //console.log(loggedInEmail,loggedInName);
+        })
+        var tripArr = JSON.parse(localStorage.getItem(loggedInEmail));
+
+        // Header Search City
+        document.querySelector("#searchBtn").addEventListener("click", searchLocation);
+        function searchLocation() {
+            event.preventDefault();
+            var location = document.querySelector("#staysLocation").value;
+            var checkin = document.querySelector("#checkinDate").value;
+            var checkout = document.querySelector("#checkoutDate").value;
+            var rooms = document.querySelector("#numberofRooms").value;
+            var guests = document.querySelector("#numberofGuests").value;
+
+            location = location.toUpperCase();
+            if (location == "PUNE") {
+                window.open("pune hotels.html", "_self");
+            }
+            else if (location == "BANGALORE") {
+                window.open("bangalore hotels.html", "_self");
+            }
+            else if (location == "GOA") {
+                window.open("goa hotels.html", "_self");
+            }
+            else {
+                alert("Please enter a valid location");
+            }
+
+            //define two date object variables to store the date values  
+            var date1 = new Date(checkin);
+            var date2 = new Date(checkout);
+
+            //calculate time difference  
+            var time_difference = date2.getTime() - date1.getTime();
+
+            //calculate days difference by dividing total milliseconds in a day  
+            var stayDays = time_difference / (1000 * 60 * 60 * 24);
+            stayDays = Number(stayDays);
+
+            headerInfo = {
+                stayslocation: location,
+                rooms: +rooms,
+                guests: +guests,
+                stayDays: stayDays,
+            }
+            tripArr.push(headerInfo);
+            localStorage.setItem(loggedInEmail, JSON.stringify(tripArr));
+            //console.log(headerInfo);
+            //console.log(location, checkin, checkout, rooms, guests, stayDays);
+        }
+
+        // Header Search Cars
+        document.querySelector("#searchCars").addEventListener("click", searchCars);
+        function searchCars() {
+            event.preventDefault();
+            var pickupCity = document.querySelector("#pickupCity").value;
+            var pickupDate = document.querySelector("#pickupDate").value;
+            var dropoffDate = document.querySelector("#dropoffDate").value;
+
+            pickupCity = pickupCity.toUpperCase();
+            if (pickupCity == "PUNE") {
+                window.open("cars data.html", "_self");
+            }
+            else if (pickupCity == "BANGALORE") {
+                window.open("cars data.html", "_self");
+            }
+            else if (pickupCity == "GOA") {
+                window.open("cars data.html", "_self");
+            }
+            else {
+                alert("Please enter a valid pickup city");
+            }
+
+            //define two date object variables to store the date values  
+            var date1 = new Date(checkin);
+            var date2 = new Date(checkout);
+
+            //calculate time difference  
+            var time_difference = date2.getTime() - date1.getTime();
+
+            //calculate days difference by dividing total milliseconds in a day  
+            var carDays = time_difference / (1000 * 60 * 60 * 24);
+            carDays = Number(carDays);
+
+            // headerInfo = {
+            //     pickupCity: pickupCity,
+            //     carDays: carDays,
+            // }
+            // headerArr.push(headerInfo);
+            // localStorage.setItem("headerArr", JSON.stringify(headerArr));
+
+            //console.log(pickupCity, pickupDate, dropoffDate, carDays);
+        }
+
+        // Header Things To Do
+        document.querySelector("#todoSearch").addEventListener("click", searchThingsToDo);
+        function searchThingsToDo() {
+            event.preventDefault();
+            var todoCity = document.querySelector("#todoCity").value;
+            var fromDate = document.querySelector("#todofromDate").value;
+            var toDate = document.querySelector("#todotoDate").value;
+
+            todoCity = todoCity.toUpperCase();
+            if (todoCity == "PUNE") {
+                window.open("things todo pune.html", "_self");
+            }
+            else if (todoCity == "BANGALORE") {
+                window.open("things todo bangalore.html", "_self");
+            }
+            else if (todoCity == "GOA") {
+                window.open("things todo goa.html", "_self");
+            }
+            else {
+                alert("Please enter a valid pickup city");
+            }
+
+            //console.log(todoCity, fromDate, toDate);
+        }
+
+        // MID DIV DIV1 FEATURED DIV2
+        document.querySelector("#beachDeals").addEventListener("click", function(){
+            event.preventDefault();
+            window.open("goa hotels.html", "_self");
+        })
+
+        document.querySelector("#under499").addEventListener("click", function () {
+                event.preventDefault();
+                window.open("all hotels.html", "_self");
+        })
+
+        document.querySelector("#flexibleStays").addEventListener("click", function () {
+                event.preventDefault();
+                window.open("all hotels.html", "_self");
+        })
+
+        // MID DIV DIV2 
+        document.querySelector("#operateTrip").addEventListener("click", function () {
+                alert("Update yet to be added!");
+        })
+
+        document.querySelector("#nationalPark").addEventListener("click", function () {
+                event.preventDefault();
+                window.open("https://www.orbitz.com/blog/2016/01/national-parks-centennial/", "_self");
+        })
+
+        document.querySelector("#roadTrip").addEventListener("click", function () {
+                event.preventDefault();
+                window.open("https://www.orbitz.com/blog/2016/08/perfect-road-trips-every-season/", "_self");
+        })
+
+        var dealsSelect = document.querySelector("#deals");
+            dealsSelect.addEventListener("click", function () {
+                event.preventDefault();
+                if (dealsSelect.value == "1") {
+                    window.open("all hotels.html", "_self");
+                }
+                else if (dealsSelect.value == "2") {
+                    window.open("all hotels.html", "_self");
+                }
+                else if (dealsSelect.value == "3") {
+                    window.open("all hotels.html", "_self");
+                }
+                else if (dealsSelect.value == "4") {
+                    window.open("all hotels.html", "_self");
+                }
+            })
+
+        var beachSelect = document.querySelector("#beach");
+            beachSelect.addEventListener("click", function () {
+                event.preventDefault();
+                if (beachSelect.value == "1") {
+                    window.open("goa hotels.html", "_self");
+                }
+                else if (beachSelect.value == "2") {
+                    window.open("goa hotels.html", "_self");
+                }
+                else if (beachSelect.value == "3") {
+                    window.open("goa hotels.html", "_self");
+                }
+                else if (beachSelect.value == "4") {
+                    window.open("goa hotels.html", "_self");
+                }
+            })
+
+        var citySelect = document.querySelector("#city");
+            citySelect.addEventListener("click", function () {
+                event.preventDefault();
+                if (citySelect.value == "1") {
+                    window.open("bangalore hotels.html", "_self");
+                }
+                else if (citySelect.value == "2") {
+                    window.open("bangalore hotels.html", "_self");
+                }
+                else if (citySelect.value == "3") {
+                    window.open("bangalore hotels.html", "_self");
+                }
+                else if (citySelect.value == "4") {
+                    window.open("bangalore hotels.html", "_self");
+                }
+            })
+
+        var vacationSelect = document.querySelector("#vacation");
+            vacationSelect.addEventListener("click", function () {
+                event.preventDefault();
+                if (vacationSelect.value == "1") {
+                    window.open("pune hotels.html", "_self");
+                }
+                else if (vacationSelect.value == "2") {
+                    window.open("pune hotels.html", "_self");
+                }
+                else if (vacationSelect.value == "3") {
+                    window.open("pune hotels.html", "_self");
+                }
+                else if (vacationSelect.value == "4") {
+                    window.open("pune hotels.html", "_self");
+                }
+            })
+
+</script>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to do in Bangalore</title>
+
+    <style>
+        /* navbar */
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+            background-color: #00253c;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+        }
+
+        #navbar>div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+
+        #MoreTravel {
+            margin-top: -65px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #00253c;
+            border: 0px;
+            color: white;
+            margin-left: 55px;
+        }
+
+        #MoreTravel>option {
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            font-size: large;
+        }
+
+        #nav_2box {
+            text-align: right;
+        }
+
+        #nav_2box div {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+
+        #navbar img {
+            margin-top: -50px;
+            width: 169px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        #MoreTravel:hover {
+            color: teal;
+        }
+
+        #MoreTravel option:hover {
+            color: teal;
+        }
+
+        #nav_2box div:hover {
+            color: teal;
+        }
+
+        /* INFO */
+        #searchFilter {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px !important;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        #sorter,
+        #searcher,
+        #rater {
+            padding: 10px;
+            width: 30%;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, fit-content);
+            grid-auto-flow: row;
+            row-gap: 30px;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px !important;
+            margin-bottom: 30px !important;
+        }
+
+        #container>.boxes {
+            width: 90%;
+            height: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .boxes>img {
+            width: 100%;
+        }
+
+        .boxes>.priceDiv {
+            display: flex;
+            margin-top: -10px;
+            justify-content: space-around;
+        }
+
+        .boxes>.ratePara {
+            display: flex;
+            justify-content: space-around;
+            margin-top: -30px;
+            margin-bottom: 10px;
+            color: gray;
+        }
+
+        .boxes>#cart {
+            padding: 10px;
+            font-weight: bold;
+            background-color: #C83259;
+            color: white;
+            border: 0px;
+            width: 70%;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .boxes>#cart:hover {
+            padding: 10px;
+            font-weight: bold;
+            background-color: #e95079;
+            color: white;
+            border: 0px;
+            width: 70%;
+            margin-bottom: 30px;
+        }
+
+        /* footer */
+        .one {
+            height: 450px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+        }
+
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-size: 14px;
+        }
+
+        .two>p {
+            margin-bottom: 30px;
+        }
+
+        .two>p>a {
+            text-decoration: none;
+            color: #007E8F;
+        }
+
+        .two>p>a:hover {
+            text-decoration: none;
+            color: #007E8F;
+            border-bottom: 1px solid #007E8F;
+        }
+
+        .imgFooter {
+            height: 22px;
+            width: 150px;
+            margin: 15px 0px 0px 20px;
+        }
+
+        .three {
+            height: 100px;
+            margin: auto;
+            margin-top: 150px !important;
+            text-align: center;
+            font-size: 12px;
+            color: #616161;
+        }
+
+        .three>hr {
+            width: 85%;
+            border-top: 1px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div id="navbar">
+
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo"
+                    id="homepageImg">
+            </div>
+
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Cars">Cars</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="nav_2box">
+            <div id="Espanol">Espanol</div>
+            <div id="listYourPriority">List your Property</div>
+            <div id="support">Support</div>
+            <div id="trips">Trips</div>
+            <div id="signIn">Sign in</div>
+        </div>
+
+
+    </div>
+
+    <!-- INFO -->
+    <div id="searchFilter">
+        <select id="sorter">
+            <option value="">Sort By Price</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+
+        <select id="rater">
+            <option value="">Sort By Rating</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+
+    </div>
+
+    <div id="container"></div>
+
+    <!-- footer -->
+    <div class="one">
+    
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="about us.html">About</a></p>
+            <p><a href="about us.html">Jobs</a></p>
+            <p><a href="about us.html">List your property</a></p>
+            <p><a href="about us.html">Partnerships</a></p>
+            <p><a href="about us.html">Newsroom</a></p>
+            <p><a href="about us.html">Investor Relation</a></p>
+            <p><a href="about us.html">Site Map</a></p>
+            <p><a href="about us.html">Orbital Rewards</a></p>
+            <p><a href="about us.html">Advertising</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="all hotels.html">Hotels in United States</a></p>
+            <p><a href="all hotels.html">Vacation Rentals in United States</a></p>
+            <p><a href="all hotels.html">Cars Rentals in United States</a></p>
+            <p><a href="all hotels.html">Domestics Flights</a></p>
+            <p><a href="all hotels.html">Vacation Packages In United States</a></p>
+            <p><a href="all hotels.html">Orbitz Reviews</a></p>
+            <p><a href="all hotels.html">Orbitz Coupons</a></p>
+            <p><a href="all hotels.html">LGBTQ Travel</a></p>
+            <p><a href="all hotels.html">Unique Accommodation</a></p>
+            <p><a href="all hotels.html">Travel Blog</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="privacy policy.html">Privacy Policy</a></p>
+            <p><a href="privacy policy.html">Terms of Use</a></p>
+            <p><a href="privacy policy.html">Orbitz Rewards Terms</a></p>
+            <p><a href="privacy policy.html">Do not sell my personal information</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="support.html">Support</a></p>
+            <p><a href="support.html">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="support.html">Cancel your flight</a></p>
+            <p><a href="support.html">Refund timelines,policies & processes</a></p>
+            <p><a href="support.html">Use an Orbitz Coupon</a></p>
+        </div>
+    
+    </div>
+    
+    <div class="three">
+        <hr>
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    //NAVBAR
+    document.querySelector("#homepageImg").addEventListener("click", openHomepage);
+        function openHomepage() {
+            event.preventDefault();
+            window.open("index.html", "_self");
+        }
+
+        var navbarSelect = document.querySelector("#MoreTravel");
+        navbarSelect.addEventListener("click", function () {
+            event.preventDefault();
+            if (navbarSelect.value == "Stays") {
+                window.open("all hotels.html", "_self");
+            }
+            else if (navbarSelect.value == "Cars") {
+                window.open("cars data.html", "_self");
+            }
+            else if (navbarSelect.value == "ThingsToDo") {
+                window.open("things to do.html", "_self");
+            }
+            else if (navbarSelect.value == "TravelBlog") {
+                window.open("https://www.orbitz.com/blog/", "_self");
+            }
+        })
+
+        document.querySelector("#Espanol").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#listYourPriority").addEventListener("click", function () {
+            alert("Update yet to be added!");
+        })
+
+        document.querySelector("#support").addEventListener("click", function () {
+            window.open("support.html", "_self");
+        })
+
+        document.querySelector("#trips").addEventListener("click", function () {
+            window.open("trips.html", "_self");
+        })
+
+        document.querySelector("#signIn").addEventListener("click", function () {
+            window.open("create account.html", "_self");
+        })
+
+    //MAIN
+    var thingsToDoBangalore = [
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Bangalore food tasting tour',
+            image: 'https://mediaim.expedia.com/localexpert/712617/774ec56b-3502-40f6-817f-b3b698f98665.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 4,
+            price: 2000
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Mysore palace tour',
+            image: 'https://mediaim.expedia.com/localexpert/708669/d14ac66e-d97c-4269-a78c-775ba103b08a.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 5,
+            price: 2500
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Mysore heritage tour',
+            image: 'https://mediaim.expedia.com/localexpert/977742/0657530d-5abc-4899-8423-d93d90a64d47.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 4,
+            price: 3500
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Bangalore temples guided tour',
+            image: 'https://mediaim.expedia.com/localexpert/1333734/31b97242-0b9d-44c9-b825-1babc73f3f33.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 5,
+            price: 3500
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: '4 days tour to Hampi and Badami',
+            image: 'https://mediaim.expedia.com/localexpert/1263727/cfb4eef4-c8b6-448f-92f5-b24374778e1a.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 5,
+            price: 12000
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Hustle and bustle of Bangalore walking tour',
+            image: 'https://mediaim.expedia.com/localexpert/1271217/1e3b7210-7a36-4fb5-9706-e87ab734639e.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 3,
+            price: 1000
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Belur and Halebid tour',
+            image: 'https://mediaim.expedia.com/localexpert/1268910/116eead9-1b6a-48da-809f-b8bee0d35603.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 4,
+            price: 4500
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Chitradurga fort tour',
+            image: 'https://mediaim.expedia.com/localexpert/1282983/f3eaf439-ad62-490f-9f09-d012c93f233a.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 4,
+            price: 2500
+        },
+
+        {
+            city: 'BANGALORE',
+            dataType: "thingstodo",
+            title: 'Good morning Bangalore cycle tour',
+            image: 'https://mediaim.expedia.com/localexpert/1305327/61c6f36d-a856-41d0-934f-2137268b9a86.jpg?impolicy=resizecrop&rw=1005&rh=565',
+            rating: 3,
+            price: 1000
+        }
+    ];
+
+    localStorage.setItem("thingsToDoBangalore", JSON.stringify(thingsToDoBangalore));
+
+        var thingsToDoBangalore = JSON.parse(localStorage.getItem("thingsToDoBangalore"));
+        dispplayData(thingsToDoBangalore);
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var loggedInEmail;
+        var loggedInName;
+        currentUser.map(function (elem) {
+            loggedInEmail = elem.Email;
+            loggedInName = elem.FirstName;
+            //console.log(loggedInEmail,loggedInName);
+        })
+        var tripArr = JSON.parse(localStorage.getItem(loggedInEmail)) || [];
+
+        function dispplayData(thingsToDoBangalore) {
+            document.querySelector("#container").innerHTML = "";
+            thingsToDoBangalore.map(function (elem) {
+                var mainDiv = document.createElement("div");
+
+                var img = document.createElement("img");
+                img.setAttribute("src", elem.image);
+
+                var name = document.createElement("h3");
+                name.innerText = elem.title;
+                name.setAttribute("class", "name");
+
+                var innerDiv = document.createElement("div");
+
+                var price = document.createElement("p");
+                price.innerText = "INR " + elem.price;
+
+                var rating = document.createElement("p");
+                rating.innerText = elem.rating + " / 5";
+
+                innerDiv.append(price, rating);
+                innerDiv.setAttribute("class", "priceDiv");
+
+                var perNight = document.createElement("p");
+                perNight.innerText = "Per person";
+
+                var ratingGiven = document.createElement("p");
+                ratingGiven.innerText = "Rating";
+
+                var ratePara = document.createElement("div");
+                ratePara.append(perNight, ratingGiven);
+                ratePara.setAttribute("class", "ratePara")
+
+                var cart = document.createElement("button");
+                cart.innerText = "Book";
+                cart.setAttribute("id", "cart");
+                cart.addEventListener("click", function () {
+                    addToCart(elem);
+                });
+
+                mainDiv.setAttribute("class", "boxes")
+                mainDiv.append(img, name, innerDiv, ratePara, cart);
+
+                document.querySelector("#container").append(mainDiv);
+            });
+        }
+
+        function addToCart(elem) {
+            tripArr.push(elem);
+            localStorage.setItem(loggedInEmail, JSON.stringify(tripArr));
+            console.log(tripArr);
+        }
+
+        document.querySelector("#sorter").addEventListener("click", sortByPrice);
+        function sortByPrice() {
+            thingsToDoBangalore.map(function (elem) {
+                var sorting = document.querySelector("#sorter").value;
+                console.log(sorting);
+                if (sorting == "l2h") {
+                    thingsToDoBangalore.sort(function (a, b) {
+                        return a.price - b.price;
+                    })
+                    dispplayData(thingsToDoBangalore)
+                }
+                else if (sorting == "h2l") {
+                    thingsToDoBangalore.sort(function (a, b) {
+                        return b.price - a.price;
+                    })
+                    dispplayData(thingsToDoBangalore)
+                }
+            })
+        }
+
+        document.querySelector("#rater").addEventListener("click", sortByRating);
+        function sortByRating() {
+            thingsToDoBangalore.map(function (elem) {
+                var rating = document.querySelector("#rater").value;
+                console.log(rating);
+                if (rating == "l2h") {
+                    thingsToDoBangalore.sort(function (a, b) { return a.rating - b.rating })
+                    dispplayData(thingsToDoBangalore)
+                }
+                else if (rating == "h2l") {
+                    thingsToDoBangalore.sort(function (a, b) { return b.rating - a.rating })
+                    dispplayData(thingsToDoBangalore)
+                }
+            })
+        }
+
+</script>

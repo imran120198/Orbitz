@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Hotels</title>
+
+    <style>
+        /* navbar */
+        body {
+            margin: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    
+        #navbar {
+            width: 100%;
+            height: 72px;
+            color: whitesmoke;
+            background-color: #00253c;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+        }
+    
+        #navbar>div:first-child {
+            display: flex;
+        }
+    
+        #navbar>div:nth-child(2) {
+            display: flex;
+        }
+    
+        #navbar>div>div {
+            height: auto;
+            width: auto;
+            margin-top: auto;
+            display: flex;
+        }
+    
+        #MoreTravel {
+            margin-top: -65px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #00253c;
+            border: 0px;
+            color: white;
+            margin-left: 55px;
+        }
+    
+        #MoreTravel>option {
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            font-size: large;
+        }
+    
+        #nav_2box {
+            text-align: right;
+        }
+    
+        #nav_2box div {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+    
+    
+        #navbar img {
+            margin-top: -50px;
+            width: 169px;
+            height: 32px;
+            cursor: pointer;
+        }
+    
+        #MoreTravel:hover {
+            color: teal;
+        }
+    
+        #MoreTravel option:hover {
+            color: teal;
+        }
+    
+        #nav_2box div:hover {
+            color: teal;
+        }
+    
+        /* info */
+        .heading {
+            width: 70%;
+            margin: auto;
+            justify-content: center;
+            padding: 10px;
+            text-align: justify;
+        }
+    
+        #searchFilter {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px !important;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+    
+        #sorter,
+        #searcher,
+        #rater {
+            padding: 10px;
+            width: 30%;
+        }
+    
+        /* container */
+        #container {
+            display: grid;
+            width: 70%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(8, 300px);
+            justify-content: center;
+            margin: 2% auto;
+            margin-top: 10px !important;
+            gap: 10px;
+            text-align: center;
+        }
+    
+        #container>div {
+            justify-content: center;
+            height: 300px;
+            box-shadow: 2px 2px 5px 5px rgb(235, 235, 235);
+        }
+    
+        #container>div>p {
+            font-size: 12px;
+            margin-top: -20px;
+            margin-bottom: -10px;
+        }
+    
+        #alignPrice {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            line-height: 0.5em;
+        }
+    
+        #imgAlign {
+            width: 100%;
+            justify-content: center;
+            height: 150px;
+            margin: auto;
+        }
+    
+        #textAlign {
+            font-size: 10px;
+            color: gray;
+            margin-top: -12px;
+    
+        }
+    
+        #btnAlign {
+            background-color: #C83259;
+            color: #FFFFFF;
+            border-radius: 2px;
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+        }
+    
+        /* footer */
+        .one {
+            height: 450px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+        }
+    
+        .two {
+            height: 350px;
+            width: 20%;
+            margin: auto;
+            color: #6bafcd;
+            font-size: 14px;
+        }
+    
+        .two>p {
+            margin-bottom: 30px;
+        }
+    
+        .two>p>a {
+            text-decoration: none;
+            color: #007E8F;
+        }
+    
+        .two>p>a:hover {
+            text-decoration: none;
+            color: #007E8F;
+            border-bottom: 1px solid #007E8F;
+        }
+    
+        .imgFooter {
+            height: 22px;
+            width: 150px;
+            margin: 15px 0px 0px 20px;
+        }
+    
+        .three {
+            height: 100px;
+            margin: auto;
+            margin-top: 150px !important;
+            text-align: center;
+            font-size: 12px;
+            color: #616161;
+        }
+    
+        .three>hr {
+            width: 85%;
+            border-top: 1px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navbar -->
+    <div id="navbar">
+    
+        <div>
+            <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="orbitz logo"
+                    id="homepageImg">
+            </div>
+    
+            <div> <select name="More Travel" id="MoreTravel" placeholder="Travel">
+                    <option value="">More Travel</option>
+                    <option value="Stays">Stays</option>
+                    <option value="Cars">Cars</option>
+                    <option value="ThingsToDo">Things to do</option>
+                    <option value="TravelBlog">Travel blog</option>
+                </select>
+            </div>
+        </div>
+    
+        <div id="nav_2box">
+            <div id="Espanol">Espanol</div>
+            <div id="listYourPriority">List your Property</div>
+            <div id="support">Support</div>
+            <div id="trips">Trips</div>
+            <div id="signIn">Sign in</div>
+        </div>
+    
+    
+    </div>
+    
+    <!-- INFO -->
+    <div id="searchFilter">
+        <select id="sorter">
+            <option value="">Sort By Price</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+    
+        <select id="rater">
+            <option value="">Sort By Rating</option>
+            <option value="l2h">Low To High</option>
+            <option value="h2l">High To Low</option>
+        </select>
+    
+        <input type="text" id="searcher" placeholder="Search By City" onkeyup="searchProduct()">
+    </div>
+    
+    <div class="heading">
+        <div class="info">
+            <h2>All Hotels</h2>
+            <p>Choose from these wide variety of hotels.
+            </p>
+    
+        </div>
+    </div>
+    
+    <!-- table -->
+    <div id="container"></div>
+    
+    <!-- footer -->
+    <div class="one">
+    
+        <div class="two">
+            <a href="https://www.expediagroup.com/home/default.aspx">
+                <img class="imgFooter"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYasxycXsGsRvvgy-7RqeSGsl6nmXvWy5Cw&usqp=CAU"
+                    alt="expedia group" />
+            </a>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Company</b></p>
+            <p><a href="about us.html">About</a></p>
+            <p><a href="about us.html">Jobs</a></p>
+            <p><a href="about us.html">List your property</a></p>
+            <p><a href="about us.html">Partnerships</a></p>
+            <p><a href="about us.html">Newsroom</a></p>
+            <p><a href="about us.html">Investor Relation</a></p>
+            <p><a href="about us.html">Site Map</a></p>
+            <p><a href="about us.html">Orbital Rewards</a></p>
+            <p><a href="about us.html">Advertising</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Explore</b></p>
+            <p><a href="all hotels.html">Hotels in United States</a></p>
+            <p><a href="all hotels.html">Vacation Rentals in United States</a></p>
+            <p><a href="all hotels.html">Cars Rentals in United States</a></p>
+            <p><a href="all hotels.html">Domestics Flights</a></p>
+            <p><a href="all hotels.html">Vacation Packages In United States</a></p>
+            <p><a href="all hotels.html">Orbitz Reviews</a></p>
+            <p><a href="all hotels.html">Orbitz Coupons</a></p>
+            <p><a href="all hotels.html">LGBTQ Travel</a></p>
+            <p><a href="all hotels.html">Unique Accommodation</a></p>
+            <p><a href="all hotels.html">Travel Blog</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Policies</b></p>
+            <p><a href="privacy policy.html">Privacy Policy</a></p>
+            <p><a href="privacy policy.html">Terms of Use</a></p>
+            <p><a href="privacy policy.html">Orbitz Rewards Terms</a></p>
+            <p><a href="privacy policy.html">Do not sell my personal information</a></p>
+        </div>
+    
+        <div class="two">
+            <p style="color:black"><b>Help</b></p>
+            <p><a href="support.html">Support</a></p>
+            <p><a href="support.html">Cancel your hotel or vacation rental booking</a></p>
+            <p><a href="support.html">Cancel your flight</a></p>
+            <p><a href="support.html">Refund timelines,policies & processes</a></p>
+            <p><a href="support.html">Use an Orbitz Coupon</a></p>
+        </div>
+    
+    </div>
+    
+    <div class="three">
+        <hr>
+        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    // NAVBAR
+        document.querySelector("#homepageImg").addEventListener("click", openHomepage);
+            function openHomepage() {
+                event.preventDefault();
+                window.open("index.html", "_self");
+            }
+
+            var navbarSelect = document.querySelector("#MoreTravel");
+            navbarSelect.addEventListener("click", function () {
+                event.preventDefault();
+                if (navbarSelect.value == "Stays") {
+                    window.open("all hotels.html", "_self");
+                }
+                else if (navbarSelect.value == "Cars") {
+                    window.open("cars data.html", "_self");
+                }
+                else if (navbarSelect.value == "ThingsToDo") {
+                    window.open("things to do.html", "_self");
+                }
+                else if (navbarSelect.value == "TravelBlog") {
+                    window.open("https://www.orbitz.com/blog/", "_self");
+                }
+            })
+
+            document.querySelector("#Espanol").addEventListener("click", function () {
+                alert("Update yet to be added!");
+            })
+
+            document.querySelector("#listYourPriority").addEventListener("click", function () {
+                alert("Update yet to be added!");
+            })
+
+            document.querySelector("#support").addEventListener("click", function () {
+                window.open("support.html", "_self");
+            })
+
+            document.querySelector("#trips").addEventListener("click", function () {
+                window.open("trips.html", "_self");
+            })
+
+            document.querySelector("#signIn").addEventListener("click", function () {
+                window.open("create account.html", "_self");
+            })
+
+    // DATA MAPPING
+    var allHotels = [
+            {
+                name: "The Westin Pune Koregaon Park",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Mundhawa",
+                img: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/02/FotoJet-1sjdg83764shgfd.jpg",
+                price: 11500,
+                rating: 4.3
+            },
+
+            {
+                name: "JW Marriott Hotel Pune",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Model colony",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXYNsEanb1mUedfgDZrPw_7riHthP-3J0C4HgAg-EBIjtWlPV",
+                price: 13600,
+                rating: 4.6
+            },
+
+            {
+                name: "Conrad Pune by Hilton",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Pune",
+                img: "https://m.lemontreehotels.com/getattachment/64ae8c4e-e628-446e-a00b-06444ca4b809/Facade.aspx",
+                price: 13600,
+                rating: 4.8
+            },
+
+            {
+                name: "Four Points by Sheraton Hotel & Serviced Apartments, Pune",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Pune",
+                img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYdkPQyxIJuzxEJdv72LNYT21cMwaYWhh3tmPwXEbVDntl7BzM",
+                price: 7500,
+                rating: 4.1
+            },
+
+            {
+                name: "The Ritz-Carlton, Pune",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Pune",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-wPdMICMMjeSIiOjFua0PRkiliFxp8y7nexbqPmtec5DZG0q",
+                price: 15700,
+                rating: 4.7
+            },
+
+            {
+                name: "Crowne Plaza Pune City Centre, an IHG Hotel",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Pune",
+                img: "https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/8ee5aa87.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+                price: 5400,
+                rating: 4.2
+            },
+
+            {
+                name: "Blue Diamond - IHCL SeleQtions",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Pune",
+                img: "https://images.trvl-media.com/hotels/1000000/590000/581400/581366/ab4fe8d0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+                price: 6300,
+                rating: 4.4
+            },
+
+            {
+                name: "Choice Service Apartment",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Kothrud",
+                img: "https://images.trvl-media.com/hotels/65000000/64700000/64690600/64690509/920372bc.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+                price: 2400,
+                rating: 4.4
+            },
+
+            {
+                name: "Novotel",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Kothrud",
+                img: "https://gos3.ibcdn.com/3ddfd8da1f9811e9b5150242ac110002.jpg",
+                price: 4400,
+                rating: 4.4
+            },
+
+            {
+                name: "Luxury Hotel",
+                dataType: "hotel",
+                city: "PUNE",
+                location: "Kothrud",
+                img: "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-lobby-50685592",
+                price: 7400,
+                rating: 4.4
+            },
+
+        {
+            name: "Golden Tulip Goa Hotel",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Candolim",
+            img: "https://pix10.agoda.net/hotelImages/410705/0/784d7a6241495889c7fe11d6a4ad99b8.jpg?ca=7&ce=1&s=1024x768",
+            price: 25000,
+            rating: 4.3
+        },
+
+        {
+            name: "Park Regis Goa",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Arpora",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6O9BaRX0-rHNE9L-0_5lH-r4WrFhvG7_ybQ&usqp=CAU",
+            price: 13600,
+            rating: 4.6
+        },
+
+        {
+            name: "Novotel Goa Resort & Spa",
+            dataType: "hotel",
+            city: "GOA",
+            location: "North Goa Beaches, Goa",
+            img: "https://r1imghtlak.mmtcdn.com/cdbbecda8e1e11e7a979025f77df004f.jpg?&output-quality=75&downsize=583:388&output-format=jpg",
+            price: 23000,
+            rating: 4.8
+        },
+
+        {
+            name: "Lemon Tree",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Bardez",
+            img: "https://www.lemontreehotels.com/CMSWebParts/LTWebParts/citysearchgallery.ashx?Gid=956",
+            price: 7200,
+            rating: 4.4
+        },
+
+        {
+            name: "Luxury Resort In Goa",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Morjim",
+            img: "https://www.theacaciahotels.com/wp-content/uploads/2015/07/banner_home2.jpg",
+            price: 22000,
+            rating: 4.7
+        },
+
+        {
+            name: "Taj Exotica",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Vagator",
+            img: "https://www.tripsavvy.com/thmb/HIwr20bnTyYXqIjyotA8J6E6D_c=/1000x667/filters:no_upscale():max_bytes(150000):strip_icc()/TajExoticaResortSpa-5bd22ff146e0fb0051a15954.jpg",
+            price: 30000,
+            rating: 4.2
+        },
+
+        {
+            name: "SANTANA RESORT",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Candolim",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPTPYr4C8Vc8VK6nBHH9PYBtpQcCWPDJdcQ&usqp=CAU",
+            price: 25000,
+            rating: 4.4
+        },
+
+        {
+            name: "Hotel Acacia",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Vagator",
+            img: "https://images.trvl-media.com/hotels/70000000/69560000/69551900/69551801/dd25faec_y.jpg",
+            price: 9000,
+            rating: 4.4
+        },
+
+        {
+            name: "Ronil Resort",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Margao",
+            img: "https://gos3.ibcdn.com/fkg91eivgl0pbaos1r0oamml000o.jpg",
+            price: 9500,
+            rating: 4.6
+        },
+
+        {
+            name: "Nazri",
+            dataType: "hotel",
+            city: "GOA",
+            location: "Goa",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSETLXmYYiv6VkmguRQMyUyhY-VtpO7AJ0bhQ&usqp=CAU",
+            price: 6800,
+            rating: 4.0
+        },
+
+        {
+            name: "JW Marriott Hotel ",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "http://www.businesstraveller.com/files/News-images/JW-Marriott-Bengaluru/blrjw_phototour05.gif",
+            price: 20000,
+            rating: 4.5,
+            location: " Bengaluru",
+        },
+
+        {
+            name: " IHG Hotel",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/3b/52/d5/guest-room.jpg",
+            price: 11000,
+            rating: 4.0,
+            location: "Gandhi Nagar",
+        },
+
+        {
+            name: "The Ritz-Carlton",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://pbs.twimg.com/media/CvqeUAwW8AA2pfS.jpg",
+            price: 17000,
+            rating: 4.7,
+            location: "Bengaluru",
+        },
+
+
+        {
+            name: "ITC Gardenia, a Luxury Collection Hotel ",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/45259901.jpg?k=3bc18f564fc2c06295f83694525bcd2e43b6f6d33b693a889bf30a14ce9f3661&o=&hp=1",
+            price: 22000,
+            rating: 4.6,
+            location: "Bengaluru",
+        },
+
+        {
+            name: "The Leela Palace Bengaluru",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://cdn0.weddingwire.in/vendor/9648/3_2/960/jpg/hotel-ext_15_39648-161701165114583.jpeg",
+            price: 25000,
+            rating: 4.7,
+            location: "Kodihalli",
+        },
+
+        {
+            name: "Shangri-La Bengaluru",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://cdn0.weddingwire.in/vendor/9648/3_2/960/jpg/hotel-ext_15_39648-161701165114583.jpeg",
+            price: 19000,
+            rating: 4.7,
+            location: "Vasanth Nagar",
+        },
+
+        {
+            name: "The Oberoi, Bengaluru",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://media-cdn.tripadvisor.com/media/photo-s/01/08/4e/41/oberoi-hotel-bangalore.jpg",
+            price: 22000,
+            rating: 4.8,
+            location: " Sivanchetti Gardens",
+        },
+
+        {
+            name: "Hyatt Centric",
+            dataType: "hotel",
+            city: "BANGALORE",
+            img: "https://b.zmtcdn.com/data/pictures/2/51102/1cd1c86632d0bc4a87f22a85f6216f26.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+            price: 15000,
+            rating: 4.0,
+            location: "Halasuru, Bengaluru",
+        },
+
+        {
+            name: "Luxury Collection Hotel",
+            dataType: "hotel",
+            city: "BANGALORE",
+            location: "Ashok Nagar, Bengaluru",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7iUUFI0pXiD7Dv63BvFzETkPb2WBBZYo1Fdx9sEEW0YC-JI4",
+            price: 9500,
+            rating: 4.6
+        },
+
+        {
+            name: "Hyatt Centric MG Road Bangalore",
+            dataType: "hotel",
+            city: "BANGALORE",
+            location: "Bengaluru",
+            img:
+                "https://images.trvl-media.com/hotels/7000000/6500000/6493900/6493895/27a0c3a7.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 7500,
+            rating: 4.0
+        },
+
+        {
+            name: "Taj Bangalore",
+            dataType: "hotel",
+            city: "BANGALORE",
+            location: "Devenhalli",
+            img:
+                "https://images.trvl-media.com/hotels/13000000/13000000/12997400/12997353/1b6e9e76.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 16000,
+            rating: 4.7
+        },
+
+        {
+            name: "Royal Orchid Central Bangalore",
+            dataType: "hotel",
+            city: "BANGALORE",
+            location: " City center",
+            img:
+                "https://images.trvl-media.com/hotels/2000000/1140000/1135700/1135650/6f30ebe1.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            price: 9000,
+            rating: 3.6
+        }
+    ];
+
+    localStorage.setItem("allHotels", JSON.stringify(allHotels))
+
+        var allHotels = JSON.parse(localStorage.getItem("allHotels"));
+        displayData(allHotels);
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var loggedInEmail;
+        var loggedInName;
+        currentUser.map(function(elem){
+            loggedInEmail=elem.Email;
+            loggedInName=elem.FirstName;
+            //console.log(loggedInEmail,loggedInName);
+        }) 
+        var tripArr = JSON.parse(localStorage.getItem(loggedInEmail)) || [];
+        // console.log(allHotels);
+
+        function displayData(allHotels) {
+            document.querySelector("#container").innerHTML = "";
+            allHotels.map(function (elem) {
+                var maindiv = document.createElement("div");
+
+                var img = document.createElement("img");
+                img.setAttribute("src", elem.img);
+                img.setAttribute("id", "imgAlign");
+
+                var name = document.createElement("h5");
+                name.innerText = elem.name;
+
+                var location = document.createElement("p");
+                location.innerText = elem.location;
+
+                var innerDiv = document.createElement("div")
+                //price & rating
+
+                var price = document.createElement("p");
+                price.innerText = elem.price;
+
+                var rating = document.createElement("p");
+                rating.innerText = elem.rating;
+
+                innerDiv.append(price, rating);
+                innerDiv.setAttribute("id", "alignPrice");
+                //price & rating text
+                var perNight = document.createElement("p");
+                perNight.innerText = "Per night";
+                perNight.setAttribute("id", "textAlign");
+
+                var ratingGiven = document.createElement("p");
+                ratingGiven.innerText = "Ratings";
+                ratingGiven.setAttribute("id", "textAlign")
+
+                var ratePara = document.createElement("div");
+                ratePara.append(perNight, ratingGiven);
+                ratePara.setAttribute("id", "alignPrice")
+                var bookBtn = document.createElement("button");
+                bookBtn.innerText = "Reserve";
+                bookBtn.setAttribute("id", "btnAlign")
+
+                bookBtn.addEventListener("click", function () {
+                    tripArr.push(elem);
+                    console.log(tripArr);
+                    localStorage.setItem(loggedInEmail, JSON.stringify(tripArr));
+
+                })
+
+                maindiv.append(img, name, location, innerDiv, ratePara, bookBtn);
+                document.querySelector("#container").append(maindiv);
+
+            });
+        }
+
+        document.querySelector("#sorter").addEventListener("click", sortByPrice);
+        function sortByPrice() {
+            allHotels.map(function (elem) {
+                var sorting = document.querySelector("#sorter").value;
+                console.log(sorting);
+                if (sorting == "l2h") {
+                    allHotels.sort(function (a, b) { return a.price - b.price })
+                    displayData(allHotels)
+                }
+                else if (sorting == "h2l") {
+                    allHotels.sort(function (a, b) { return b.price - a.price })
+                    displayData(allHotels)
+                }
+            })
+        }
+
+        document.querySelector("#rater").addEventListener("click", sortByRating);
+        function sortByRating() {
+            allHotels.map(function (elem) {
+                var rating = document.querySelector("#rater").value;
+                console.log(rating);
+                if (rating == "l2h") {
+                    allHotels.sort(function (a, b) { return a.rating - b.rating })
+                    displayData(allHotels)
+                }
+                else if (rating == "h2l") {
+                    allHotels.sort(function (a, b) { return b.rating - a.rating })
+                    displayData(allHotels)
+                }
+            })
+        }
+
+        function searchProduct() {
+            allHotels.map(function (elem) {
+                var searchText = document.querySelector("#searcher").value;
+                searchText=searchText.toUpperCase();
+                console.log(searchText);
+                var filterData = allHotels.filter(function (elem) {
+                    return elem.city.includes(searchText);
+                })
+                console.log(filterData);
+                displayData(filterData)
+            })
+        }
+
+</script>
